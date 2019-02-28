@@ -16,7 +16,7 @@ namespace Asztali_alkalmazás_Záródolgozat
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Bejelentkezés());
         }
     }
 }

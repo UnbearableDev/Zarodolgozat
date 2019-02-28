@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Asztali_alkalmazás_Záródolgozat
 {
-    public partial class Form1 : Form
+    public partial class Bejelentkezés : Form
     {
-        public Form1()
+        public Bejelentkezés()
         {
             InitializeComponent();
         }
