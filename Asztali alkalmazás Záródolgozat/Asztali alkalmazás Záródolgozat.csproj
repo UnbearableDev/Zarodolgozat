@@ -52,10 +52,19 @@
     <Compile Include="Bejelentkezés.Designer.cs">
       <DependentUpon>Bejelentkezés.cs</DependentUpon>
     </Compile>
+    <Compile Include="Multitool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Multitool.Designer.cs">
+      <DependentUpon>Multitool.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Bejelentkezés.resx">
       <DependentUpon>Bejelentkezés.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Multitool.resx">
+      <DependentUpon>Multitool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
