@@ -33,17 +33,17 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.buttonBetoltes = new System.Windows.Forms.Button();
+            this.buttonHozzaadas = new System.Windows.Forms.Button();
+            this.buttonSzerkesztes = new System.Windows.Forms.Button();
+            this.buttonTorles = new System.Windows.Forms.Button();
+            this.buttonKilepes = new System.Windows.Forms.Button();
+            this.textBoxMultiAzonosito = new System.Windows.Forms.TextBox();
+            this.textBoxMultiNev = new System.Windows.Forms.TextBox();
+            this.textBoxMultiEmail = new System.Windows.Forms.TextBox();
+            this.textBoxMultiMegrendelestipusa = new System.Windows.Forms.TextBox();
+            this.textBoxMultiMegrendeles = new System.Windows.Forms.TextBox();
+            this.textBoxMultiVaros = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -93,120 +93,120 @@
             this.dataGridView1.Size = new System.Drawing.Size(709, 374);
             this.dataGridView1.TabIndex = 1;
             // 
-            // button1
+            // buttonBetoltes
             // 
-            this.button1.Location = new System.Drawing.Point(727, 41);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonBetoltes.Location = new System.Drawing.Point(727, 41);
+            this.buttonBetoltes.Name = "buttonBetoltes";
+            this.buttonBetoltes.Size = new System.Drawing.Size(75, 23);
+            this.buttonBetoltes.TabIndex = 2;
+            this.buttonBetoltes.Text = "Betöltés";
+            this.buttonBetoltes.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonHozzaadas
             // 
-            this.button2.Location = new System.Drawing.Point(728, 194);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonHozzaadas.Location = new System.Drawing.Point(728, 194);
+            this.buttonHozzaadas.Name = "buttonHozzaadas";
+            this.buttonHozzaadas.Size = new System.Drawing.Size(75, 23);
+            this.buttonHozzaadas.TabIndex = 3;
+            this.buttonHozzaadas.Text = "Hozzáadás";
+            this.buttonHozzaadas.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonSzerkesztes
             // 
-            this.button3.Location = new System.Drawing.Point(728, 223);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonSzerkesztes.Location = new System.Drawing.Point(728, 223);
+            this.buttonSzerkesztes.Name = "buttonSzerkesztes";
+            this.buttonSzerkesztes.Size = new System.Drawing.Size(75, 23);
+            this.buttonSzerkesztes.TabIndex = 4;
+            this.buttonSzerkesztes.Text = "Szerkesztés";
+            this.buttonSzerkesztes.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonTorles
             // 
-            this.button4.Location = new System.Drawing.Point(728, 251);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonTorles.Location = new System.Drawing.Point(728, 251);
+            this.buttonTorles.Name = "buttonTorles";
+            this.buttonTorles.Size = new System.Drawing.Size(75, 23);
+            this.buttonTorles.TabIndex = 5;
+            this.buttonTorles.Text = "Törlés";
+            this.buttonTorles.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // buttonKilepes
             // 
-            this.button5.Location = new System.Drawing.Point(728, 379);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonKilepes.Location = new System.Drawing.Point(728, 379);
+            this.buttonKilepes.Name = "buttonKilepes";
+            this.buttonKilepes.Size = new System.Drawing.Size(75, 23);
+            this.buttonKilepes.TabIndex = 6;
+            this.buttonKilepes.Text = "Kilépés";
+            this.buttonKilepes.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxMultiAzonosito
             // 
-            this.textBox1.Location = new System.Drawing.Point(826, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
+            this.textBoxMultiAzonosito.Location = new System.Drawing.Point(826, 44);
+            this.textBoxMultiAzonosito.Name = "textBoxMultiAzonosito";
+            this.textBoxMultiAzonosito.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMultiAzonosito.TabIndex = 7;
             // 
-            // textBox2
+            // textBoxMultiNev
             // 
-            this.textBox2.Location = new System.Drawing.Point(826, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
+            this.textBoxMultiNev.Location = new System.Drawing.Point(826, 83);
+            this.textBoxMultiNev.Name = "textBoxMultiNev";
+            this.textBoxMultiNev.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMultiNev.TabIndex = 8;
             // 
-            // textBox3
+            // textBoxMultiEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(826, 160);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
+            this.textBoxMultiEmail.Location = new System.Drawing.Point(826, 160);
+            this.textBoxMultiEmail.Name = "textBoxMultiEmail";
+            this.textBoxMultiEmail.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMultiEmail.TabIndex = 9;
             // 
-            // textBox5
+            // textBoxMultiMegrendelestipusa
             // 
-            this.textBox5.Location = new System.Drawing.Point(826, 237);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 11;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textBoxMultiMegrendelestipusa.Location = new System.Drawing.Point(826, 237);
+            this.textBoxMultiMegrendelestipusa.Name = "textBoxMultiMegrendelestipusa";
+            this.textBoxMultiMegrendelestipusa.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMultiMegrendelestipusa.TabIndex = 11;
+            this.textBoxMultiMegrendelestipusa.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // textBox6
+            // textBoxMultiMegrendeles
             // 
-            this.textBox6.Location = new System.Drawing.Point(826, 197);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 12;
+            this.textBoxMultiMegrendeles.Location = new System.Drawing.Point(826, 197);
+            this.textBoxMultiMegrendeles.Name = "textBoxMultiMegrendeles";
+            this.textBoxMultiMegrendeles.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMultiMegrendeles.TabIndex = 12;
             // 
-            // textBox7
+            // textBoxMultiVaros
             // 
-            this.textBox7.Location = new System.Drawing.Point(826, 122);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 13;
+            this.textBoxMultiVaros.Location = new System.Drawing.Point(826, 122);
+            this.textBoxMultiVaros.Name = "textBoxMultiVaros";
+            this.textBoxMultiVaros.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMultiVaros.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(823, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 14;
-            this.label1.Text = "label1";
+            this.label1.Text = "Azonosító";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(823, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 15;
-            this.label2.Text = "label2";
+            this.label2.Text = "Név";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(823, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 16;
-            this.label3.Text = "label3";
+            this.label3.Text = "Város";
             // 
             // label4
             // 
@@ -215,25 +215,25 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 17;
-            this.label4.Text = "label4";
+            this.label4.Text = "E-mail";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(823, 181);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(68, 13);
             this.label5.TabIndex = 18;
-            this.label5.Text = "label5";
+            this.label5.Text = "Megrendelés";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(823, 220);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(101, 13);
             this.label6.TabIndex = 19;
-            this.label6.Text = "label6";
+            this.label6.Text = "Megrendelés típusa";
             // 
             // Multitool
             // 
@@ -247,17 +247,17 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBoxMultiVaros);
+            this.Controls.Add(this.textBoxMultiMegrendeles);
+            this.Controls.Add(this.textBoxMultiMegrendelestipusa);
+            this.Controls.Add(this.textBoxMultiEmail);
+            this.Controls.Add(this.textBoxMultiNev);
+            this.Controls.Add(this.textBoxMultiAzonosito);
+            this.Controls.Add(this.buttonKilepes);
+            this.Controls.Add(this.buttonTorles);
+            this.Controls.Add(this.buttonSzerkesztes);
+            this.Controls.Add(this.buttonHozzaadas);
+            this.Controls.Add(this.buttonBetoltes);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -278,17 +278,17 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button buttonBetoltes;
+        private System.Windows.Forms.Button buttonHozzaadas;
+        private System.Windows.Forms.Button buttonSzerkesztes;
+        private System.Windows.Forms.Button buttonTorles;
+        private System.Windows.Forms.Button buttonKilepes;
+        private System.Windows.Forms.TextBox textBoxMultiAzonosito;
+        private System.Windows.Forms.TextBox textBoxMultiNev;
+        private System.Windows.Forms.TextBox textBoxMultiEmail;
+        private System.Windows.Forms.TextBox textBoxMultiMegrendelestipusa;
+        private System.Windows.Forms.TextBox textBoxMultiMegrendeles;
+        private System.Windows.Forms.TextBox textBoxMultiVaros;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

@@ -46,30 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bejelentkezés.cs">
+    <Compile Include="Modell\Megrendelő.cs" />
+    <Compile Include="Nézet\Bejelentkezés.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bejelentkezés.Designer.cs">
+    <Compile Include="Nézet\Bejelentkezés.Designer.cs">
       <DependentUpon>Bejelentkezés.cs</DependentUpon>
     </Compile>
-    <Compile Include="Multitool.cs">
+    <Compile Include="Nézet\Multitool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Multitool.Designer.cs">
+    <Compile Include="Nézet\Multitool.Designer.cs">
       <DependentUpon>Multitool.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Szerkesztés.cs">
+    <Compile Include="Nézet\Szerkesztés.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Szerkesztés.Designer.cs">
+    <Compile Include="Nézet\Szerkesztés.Designer.cs">
       <DependentUpon>Szerkesztés.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Bejelentkezés.resx">
+    <EmbeddedResource Include="Nézet\Bejelentkezés.resx">
       <DependentUpon>Bejelentkezés.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Multitool.resx">
+    <EmbeddedResource Include="Nézet\Multitool.resx">
       <DependentUpon>Multitool.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -81,7 +82,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Szerkesztés.resx">
+    <EmbeddedResource Include="Nézet\Szerkesztés.resx">
       <DependentUpon>Szerkesztés.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -96,6 +97,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RendszerDizájn\" />
+    <Folder Include="Szolgáltatás\" />
+    <Folder Include="Tár\" />
+    <Folder Include="Validáció\" />
+    <Folder Include="Vezérlő\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
