@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonOK = new System.Windows.Forms.Button();
+            this.buttonMégse = new System.Windows.Forms.Button();
             this.textBoxSzerkAzonosito = new System.Windows.Forms.TextBox();
             this.textBoxSzerkVaros = new System.Windows.Forms.TextBox();
             this.textBoxSzerkNev = new System.Windows.Forms.TextBox();
@@ -42,25 +42,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonOK
             // 
-            this.button1.Location = new System.Drawing.Point(91, 330);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonOK.Location = new System.Drawing.Point(91, 330);
+            this.buttonOK.Name = "buttonOK";
+            this.buttonOK.Size = new System.Drawing.Size(75, 23);
+            this.buttonOK.TabIndex = 0;
+            this.buttonOK.Text = "Elfogadás";
+            this.buttonOK.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonMégse
             // 
-            this.button2.Location = new System.Drawing.Point(91, 359);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonMégse.Location = new System.Drawing.Point(91, 359);
+            this.buttonMégse.Name = "buttonMégse";
+            this.buttonMégse.Size = new System.Drawing.Size(75, 23);
+            this.buttonMégse.TabIndex = 1;
+            this.buttonMégse.Text = "Mégse";
+            this.buttonMégse.UseVisualStyleBackColor = true;
             // 
             // textBoxSzerkAzonosito
             // 
@@ -158,12 +160,30 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Megrendelés típusa";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(83, 304);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(82, 286);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Telefonszám";
+            // 
             // Szerkesztés
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(270, 394);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -176,8 +196,8 @@
             this.Controls.Add(this.textBoxSzerkNev);
             this.Controls.Add(this.textBoxSzerkVaros);
             this.Controls.Add(this.textBoxSzerkAzonosito);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonMégse);
+            this.Controls.Add(this.buttonOK);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "Szerkesztés";
             this.Text = "Szerkesztés";
@@ -188,8 +208,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonOK;
+        private System.Windows.Forms.Button buttonMégse;
         private System.Windows.Forms.TextBox textBoxSzerkAzonosito;
         private System.Windows.Forms.TextBox textBoxSzerkVaros;
         private System.Windows.Forms.TextBox textBoxSzerkNev;
@@ -202,5 +222,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
     }
 }

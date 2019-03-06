@@ -67,6 +67,13 @@
     <Compile Include="Nézet\Szerkesztés.Designer.cs">
       <DependentUpon>Szerkesztés.cs</DependentUpon>
     </Compile>
+    <Compile Include="Szolgáltatás\MegrendelőkSzolgáltatás.cs" />
+    <Compile Include="Szolgáltatás\MegrendelőkSzolgáltatásMegrendelőKezelés.cs" />
+    <Compile Include="Tár\Megrendelők.cs" />
+    <Compile Include="Tár\MegrendelőkF.cs" />
+    <Compile Include="Tár\MegrendelőkKezelMegrendelőt.cs" />
+    <Compile Include="Tár\MegrendelőkKezelMegrendelőtF.cs" />
+    <Compile Include="Vezérlő\MegrendelőVezérlő.cs" />
     <EmbeddedResource Include="Nézet\Bejelentkezés.resx">
       <DependentUpon>Bejelentkezés.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,16 +101,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RendszerDizájn\Rétegek.cd" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="RendszerDizájn\" />
-    <Folder Include="Szolgáltatás\" />
-    <Folder Include="Tár\" />
+    <Folder Include="Kivétel\" />
     <Folder Include="Validáció\" />
-    <Folder Include="Vezérlő\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

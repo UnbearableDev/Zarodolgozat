@@ -50,6 +50,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.textBoxTelefonszam = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -235,12 +237,30 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Megrendelés típusa";
             // 
+            // textBoxTelefonszam
+            // 
+            this.textBoxTelefonszam.Location = new System.Drawing.Point(826, 277);
+            this.textBoxTelefonszam.Name = "textBoxTelefonszam";
+            this.textBoxTelefonszam.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTelefonszam.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(823, 260);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 13);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Telefonszám";
+            // 
             // Multitool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(947, 408);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBoxTelefonszam);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -295,5 +315,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxTelefonszam;
+        private System.Windows.Forms.Label label7;
     }
 }
