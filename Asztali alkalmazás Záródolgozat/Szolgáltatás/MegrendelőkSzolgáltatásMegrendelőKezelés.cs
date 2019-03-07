@@ -3,10 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Asztali_alkalmazás_Záródolgozat.Tár;
 
 namespace Asztali_alkalmazás_Záródolgozat.Szolgáltatás
 {
     class MegrendelőkSzolgáltatásMegrendelőKezelés
     {
+        public void visszaadMegrendelőAzonosítót()
+        {
+            return 
+        }
+        public void hozzáadMegrendelőtMegrendelőkhöz()
+        {
+
+        }
+        public void módosítMegrendelőtMegrendelőkhöz()
+        {
+
+        }
+        public void kitörölMegrendelőtMegrendelőkböl()
+        {
+
+        }
+     
     }
 }

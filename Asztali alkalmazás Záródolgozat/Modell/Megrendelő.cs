@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Asztali_alkalmazás_Záródolgozat.Modell
+namespace Asztali_alkalmazás_Záródolgozat.Tár
 {
     class Megrendelő
     {
@@ -15,7 +15,16 @@ namespace Asztali_alkalmazás_Záródolgozat.Modell
         private string munka;
         private string munkatipus;
         private int telefonszám;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="azonosító"></param>
+        /// <param name="név"></param>
+        /// <param name="város"></param>
+        /// <param name="email"></param>
+        /// <param name="munka"></param>
+        /// <param name="munkatipus"></param>
+        /// <param name="telefonszám"></param>
         public Megrendelő(int azonosító, string név, string város, string email, string munka, string munkatipus,int telefonszám)
         {
             this.azonosító = azonosító;
@@ -87,6 +96,28 @@ namespace Asztali_alkalmazás_Záródolgozat.Modell
         public void setTelefonszam(int telefonszám)
         {
             this.telefonszám = telefonszám;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="megrendelő"></param>
+        public void frissités(Megrendelő megrendelő)
+        {
+            this.azonosító = megrendelő.getAzonosító();
+            this.név = megrendelő.getNév();
+            this.város = megrendelő.getVáros();
+            this.email = megrendelő.getEmail();
+            this.munka = megrendelő.getMunka();
+            this.munkatipus = megrendelő.getMunkatipus();
+            this.telefonszám = megrendelő.getTelefonszám();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return "Azonosító: " + azonosító + "Teljes Név: " + név + "Város: " + város + "E-mail cím: " + email + "Munka leírása: " + munka + "Munka típusa: " + munkatipus + "Telefonszám: " + telefonszám;
         }
     }
 }
