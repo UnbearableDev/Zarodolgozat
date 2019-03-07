@@ -9,5 +9,6 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
     interface MegrendelőkF
     {
         List<Megrendelő> getMegrendelők();
+
     }
 }

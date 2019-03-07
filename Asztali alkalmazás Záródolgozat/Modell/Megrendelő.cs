@@ -16,15 +16,15 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         private string munkatipus;
         private int telefonszám;
         /// <summary>
-        /// 
+        /// Konstruktor
         /// </summary>
-        /// <param name="azonosító"></param>
-        /// <param name="név"></param>
-        /// <param name="város"></param>
-        /// <param name="email"></param>
-        /// <param name="munka"></param>
-        /// <param name="munkatipus"></param>
-        /// <param name="telefonszám"></param>
+        /// <param name="azonosító">Auto incrementes azonosító</param>
+        /// <param name="név">Megrendelő teljes neve</param>
+        /// <param name="város">Megrendelő városa</param>
+        /// <param name="email">Megrendelő E-mail címe</param>
+        /// <param name="munka">Munka leírása</param>
+        /// <param name="munkatipus">Munka típusa</param>
+        /// <param name="telefonszám">Megrendelő telefonszáma</param>
         public Megrendelő(int azonosító, string név, string város, string email, string munka, string munkatipus,int telefonszám)
         {
             this.azonosító = azonosító;

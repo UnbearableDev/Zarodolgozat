@@ -24,5 +24,6 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         {
             return megrendelők;
         }
+
     }
 }
