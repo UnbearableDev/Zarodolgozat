@@ -10,16 +10,16 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
     {
         private List<Megrendelő> megrendelők;
         /// <summary>
-        /// 
+        /// Konstruktor a Listához
         /// </summary>
         public Megrendelők()
         {
             this.megrendelők = new List<Megrendelő>();
         }
         /// <summary>
-        /// 
+        /// Get metódus a listához
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Megrendelők listáját</returns>
         public List<Megrendelő> getMegrendelők()
         {
             return megrendelők;

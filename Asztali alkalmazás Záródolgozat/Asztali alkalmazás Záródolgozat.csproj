@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adatbázis\Kapcsolat.cs" />
     <Compile Include="Modell\Megrendelő.cs" />
+    <Compile Include="Adatbázis\MySQLDatabaseInterface.cs" />
     <Compile Include="Nézet\Bejelentkezés.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +74,13 @@
     <Compile Include="Tár\MegrendelőkF.cs" />
     <Compile Include="Tár\MegrendelőkKezelMegrendelőt.cs" />
     <Compile Include="Tár\MegrendelőkKezelMegrendelőtF.cs" />
+    <Compile Include="Validáció\AzonosítóValidáció.cs" />
+    <Compile Include="Validáció\EmailValidáció.cs" />
+    <Compile Include="Validáció\MunkatípusValidáció.cs" />
+    <Compile Include="Validáció\MunkaValidáció.cs" />
+    <Compile Include="Validáció\NévValidáció.cs" />
+    <Compile Include="Validáció\TelefonszámValidáció.cs" />
+    <Compile Include="Validáció\VárosValidáció.cs" />
     <Compile Include="Vezérlő\MegrendelőVezérlő.cs" />
     <EmbeddedResource Include="Nézet\Bejelentkezés.resx">
       <DependentUpon>Bejelentkezés.cs</DependentUpon>
@@ -107,7 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Kivétel\" />
-    <Folder Include="Validáció\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
