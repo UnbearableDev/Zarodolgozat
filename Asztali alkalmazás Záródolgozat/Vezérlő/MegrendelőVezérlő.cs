@@ -9,6 +9,22 @@ namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
 {
     class MegrendelőVezérlő
     {
-        
+       public void hozzáadniMegrendelőtMegrendelőkhöz()
+        {
+
+        }
+        public void törölniMegrendelőtMegrendelőkböl()
+        {
+
+        }
+        public void módosítaniMegrendelőtMegrendelőkhöz()
+        {
+
+        }
+        public void betölteniMegrendelőket()
+        {
+
+        }
+     
     }
 }

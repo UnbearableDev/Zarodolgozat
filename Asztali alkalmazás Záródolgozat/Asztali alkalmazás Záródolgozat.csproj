@@ -69,7 +69,6 @@
     <Compile Include="Nézet\Szerkesztés.Designer.cs">
       <DependentUpon>Szerkesztés.cs</DependentUpon>
     </Compile>
-    <Compile Include="Szolgáltatás\MegrendelőkSzolgáltatás.cs" />
     <Compile Include="Tár\Megrendelők.cs" />
     <Compile Include="Tár\MegrendelőkF.cs" />
     <Compile Include="Tár\MegrendelőkKezelMegrendelőt.cs" />
