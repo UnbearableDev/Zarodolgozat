@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Validáció
 {
-    class TelefonszámValidáció
+   public class TelefonszámValidáció
     {
         private int telefonszám;
         public TelefonszámValidáció(int telefonszám)
@@ -15,24 +15,25 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció
         }
         public void validácíó()
         {
-            if (üresTelefonszám())
+            if (értékNullaTelefonszám())
             {
 
             }
-            if (nemSzámTelefonszám())
-            {
+           
+        }
 
+        private bool értékNullaTelefonszám()
+        {
+            if (telefonszám == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
-        private bool üresTelefonszám()
-        {
-            throw new NotImplementedException();
-        }
-
-        private bool nemSzámTelefonszám()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

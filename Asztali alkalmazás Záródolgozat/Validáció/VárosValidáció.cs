@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Validáció
 {
-    class VárosValidáció
+   public class VárosValidáció
     {
         private string város;
         public VárosValidáció(string város)
@@ -20,20 +20,21 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció
             {
 
             }
-            if (nemSzövegVáros())
-            {
-
-            }
+        
         }
 
-        private bool nemSzövegVáros()
-        {
-            throw new NotImplementedException();
-        }
+      
 
         private bool üresVáros()
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(város) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

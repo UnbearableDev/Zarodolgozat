@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Validáció
 {
-    class MunkaValidáció
+   public class MunkaValidáció
     {
         private string munka;
         public MunkaValidáció(string munka)
@@ -20,20 +20,20 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció
             {
 
             }
-            if(nemSzövegMunka())
-            {
-
-            }
+        
         }
 
-        private bool nemSzövegMunka()
-        {
-            throw new NotImplementedException();
-        }
-
+    
         private bool üresMunka()
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(munka) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

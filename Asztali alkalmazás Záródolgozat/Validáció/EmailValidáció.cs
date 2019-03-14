@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Validáció
 {
-    class EmailValidáció
+   public class EmailValidáció
     {
         private string email;
         public EmailValidáció(string email)
@@ -29,12 +29,27 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció
 
         private bool nincsKukacAzEmailban()
         {
-            throw new NotImplementedException();
+           if(email.Contains("@") == true)
+            {
+                return false;
+            }
+           else
+            {
+                return true;
+
+            }
         }
 
         private bool üresEmail()
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(email) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

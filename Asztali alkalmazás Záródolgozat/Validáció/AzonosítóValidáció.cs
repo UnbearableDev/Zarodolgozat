@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Validáció
 {
-    class AzonosítóValidáció
+    public class AzonosítóValidáció
     {
         private int azonosító;
         public AzonosítóValidáció(int azonosító)
@@ -15,7 +15,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció
         }
         public void validácíó()
         {
-            if(üresAzonosító())
+            if(értékNullaAzonosító())
             {
 
             }
@@ -25,14 +25,28 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció
             }
         }
 
-        private bool üresAzonosító()
+        private bool értékNullaAzonosító()
         {
-            throw new NotImplementedException();
+            if(azonosító == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private bool nemSzámAzonosító()
         {
-            throw new NotImplementedException();
+            if(azonosító.GetType() == typeof(int))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

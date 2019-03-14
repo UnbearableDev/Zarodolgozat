@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Validáció
 {
-    class MunkatípusValidáció
+   public class MunkatípusValidáció
     {
         private string munkatípus;
 
@@ -16,24 +16,24 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció
         }
         public void validácíó()
         {
-            if(uresMunkatípus())
+            if(üresMunkatípus())
             {
 
             }
-            if(nemSzövegMunkatípus())
+    
+        }
+
+ 
+        private bool üresMunkatípus()
+        {
+            if (string.IsNullOrEmpty(munkatípus) == true)
             {
-
+                return true;
             }
-        }
-
-        private bool nemSzövegMunkatípus()
-        {
-            throw new NotImplementedException();
-        }
-
-        private bool uresMunkatípus()
-        {
-            throw new NotImplementedException();
+            else
+            {
+                return false;
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Validáció
 {
-    class NévValidáció
+   public class NévValidáció
     {
         private string név;
         public NévValidáció(string név)
@@ -20,10 +20,6 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció
             {
 
             }
-            if (nemSzövegNév())
-            {
-
-            }
             if(nemNagyBetűNév())
             {
 
@@ -32,17 +28,28 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció
 
         private bool nemNagyBetűNév()
         {
-            throw new NotImplementedException();
+           if(Char.IsUpper(név[0]) == true)
+            {
+                return false;
+            }
+           else
+            {
+                return true;
+            }
         }
 
-        private bool nemSzövegNév()
-        {
-            throw new NotImplementedException();
-        }
+       
 
         private bool üresNév()
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(név) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

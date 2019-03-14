@@ -114,7 +114,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Kivétel\" />
+    <Folder Include="Kivétel\AzonosítóKivétel\" />
+    <Folder Include="Kivétel\EmailKivétel\" />
+    <Folder Include="Kivétel\MunkaKivétel\" />
+    <Folder Include="Kivétel\MunkatípusKivétel\" />
+    <Folder Include="Kivétel\NévKivétel\" />
+    <Folder Include="Kivétel\TelefonszámKivétel\" />
+    <Folder Include="Kivétel\VárosEmail\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
