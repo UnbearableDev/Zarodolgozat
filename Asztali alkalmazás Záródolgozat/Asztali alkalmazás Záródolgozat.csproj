@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +48,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adatbázis\Kapcsolat.cs" />
+    <Compile Include="Kivétel\AzonosítóKivétel\nemSzámAzonosítóException.cs" />
+    <Compile Include="Kivétel\AzonosítóKivétel\értékNullaAzonosítóException.cs" />
+    <Compile Include="Kivétel\EmailKivétel\nincsKukacAzEmailbanException.cs" />
+    <Compile Include="Kivétel\EmailKivétel\üresEmailException.cs" />
+    <Compile Include="Kivétel\MunkaKivétel\üresMunkaException.cs" />
+    <Compile Include="Kivétel\MunkatípusKivétel\üresMunkatípusException.cs" />
+    <Compile Include="Kivétel\NévKivétel\nemNagyBetűNévException.cs" />
+    <Compile Include="Kivétel\NévKivétel\üresNévException.cs" />
+    <Compile Include="Kivétel\TelefonszámKivétel\értékNullaTelefonszámException.cs" />
+    <Compile Include="Kivétel\VárosEmail\üresVárosException.cs" />
     <Compile Include="Modell\Megrendelő.cs" />
     <Compile Include="Adatbázis\MySQLDatabaseInterface.cs" />
     <Compile Include="Nézet\Bejelentkezés.cs">
@@ -113,14 +124,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Kivétel\AzonosítóKivétel\" />
-    <Folder Include="Kivétel\EmailKivétel\" />
-    <Folder Include="Kivétel\MunkaKivétel\" />
-    <Folder Include="Kivétel\MunkatípusKivétel\" />
-    <Folder Include="Kivétel\NévKivétel\" />
-    <Folder Include="Kivétel\TelefonszámKivétel\" />
-    <Folder Include="Kivétel\VárosEmail\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
