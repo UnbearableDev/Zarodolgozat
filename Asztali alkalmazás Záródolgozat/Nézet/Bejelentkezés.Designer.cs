@@ -1,4 +1,4 @@
-﻿namespace Asztali_alkalmazás_Záródolgozat
+﻿namespace Asztali_alkalmazás_Záródolgozat.Nézet
 {
     partial class Bejelentkezés
     {
@@ -101,6 +101,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "Bejelentkezés";
             this.Text = "Bejelentkezés";
+            this.Load += new System.EventHandler(this.Bejelentkezés_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

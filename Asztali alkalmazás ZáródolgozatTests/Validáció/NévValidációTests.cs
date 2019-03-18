@@ -12,13 +12,13 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
     public class NévValidációTests
     {
         [TestMethod()]
-        public void NévValidációTest()
+        public void nemNagyBetűNévTeszt()
         {
             Assert.Fail();
         }
 
         [TestMethod()]
-        public void validácíóTest()
+        public void üresNévTeszt()
         {
             Assert.Fail();
         }

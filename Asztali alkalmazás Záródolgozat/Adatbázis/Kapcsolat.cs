@@ -14,7 +14,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Adatbázis
             MySQLDatabaseInterface mdi = new MySQLDatabaseInterface();
             mdi.setErrorToUserInterface(true);
             mdi.setErrorToGraphicalUserInterface(false);
-            mdi.setConnectionServerData("localhost", "rendeles", "3306");
+            mdi.setConnectionServerData("localhost", "megrendelok", "3306");
             mdi.setConnectionUserData("root", "");
             mdi.makeConnectionToDatabase();
 

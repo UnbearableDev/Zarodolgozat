@@ -1,4 +1,4 @@
-﻿namespace Asztali_alkalmazás_Záródolgozat
+﻿namespace Asztali_alkalmazás_Záródolgozat.Nézet
 {
     partial class Szerkesztés
     {
@@ -30,13 +30,11 @@
         {
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonMégse = new System.Windows.Forms.Button();
-            this.textBoxSzerkAzonosito = new System.Windows.Forms.TextBox();
             this.textBoxSzerkVaros = new System.Windows.Forms.TextBox();
             this.textBoxSzerkNev = new System.Windows.Forms.TextBox();
             this.textBoxSzerkEmail = new System.Windows.Forms.TextBox();
             this.textBoxSzerkMegrendeles = new System.Windows.Forms.TextBox();
             this.textBoxSzerkMegrendelestipusa = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,13 +61,6 @@
             this.buttonMégse.TabIndex = 1;
             this.buttonMégse.Text = "Mégse";
             this.buttonMégse.UseVisualStyleBackColor = true;
-            // 
-            // textBoxSzerkAzonosito
-            // 
-            this.textBoxSzerkAzonosito.Location = new System.Drawing.Point(85, 59);
-            this.textBoxSzerkAzonosito.Name = "textBoxSzerkAzonosito";
-            this.textBoxSzerkAzonosito.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSzerkAzonosito.TabIndex = 2;
             // 
             // textBoxSzerkVaros
             // 
@@ -105,15 +96,6 @@
             this.textBoxSzerkMegrendelestipusa.Name = "textBoxSzerkMegrendelestipusa";
             this.textBoxSzerkMegrendelestipusa.Size = new System.Drawing.Size(100, 20);
             this.textBoxSzerkMegrendelestipusa.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Azonosító";
             // 
             // label2
             // 
@@ -189,18 +171,17 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSzerkMegrendelestipusa);
             this.Controls.Add(this.textBoxSzerkMegrendeles);
             this.Controls.Add(this.textBoxSzerkEmail);
             this.Controls.Add(this.textBoxSzerkNev);
             this.Controls.Add(this.textBoxSzerkVaros);
-            this.Controls.Add(this.textBoxSzerkAzonosito);
             this.Controls.Add(this.buttonMégse);
             this.Controls.Add(this.buttonOK);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "Szerkesztés";
             this.Text = "Szerkesztés";
+            this.Load += new System.EventHandler(this.Szerkesztés_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,13 +191,11 @@
 
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button buttonMégse;
-        private System.Windows.Forms.TextBox textBoxSzerkAzonosito;
         private System.Windows.Forms.TextBox textBoxSzerkVaros;
         private System.Windows.Forms.TextBox textBoxSzerkNev;
         private System.Windows.Forms.TextBox textBoxSzerkEmail;
         private System.Windows.Forms.TextBox textBoxSzerkMegrendeles;
         private System.Windows.Forms.TextBox textBoxSzerkMegrendelestipusa;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

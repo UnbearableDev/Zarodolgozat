@@ -12,15 +12,15 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
     public class AzonosítóValidációTests
     {
         [TestMethod()]
-        public void AzonosítóValidációTest()
+        public void értékNullaAzonosítóTeszt()
         {
-            Assert.Fail();
+            
         }
 
         [TestMethod()]
-        public void validácíóTest()
+        public void nemSzámAzonosítóTeszt()
         {
-            Assert.Fail();
+           
         }
     }
 }

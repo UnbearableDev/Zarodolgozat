@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Asztali_alkalmazás_Záródolgozat
+namespace Asztali_alkalmazás_Záródolgozat.Nézet
 {
     public partial class Szerkesztés : Form
     {
         public Szerkesztés()
         {
             InitializeComponent();
+        }
+
+        private void Szerkesztés_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

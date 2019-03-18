@@ -8,5 +8,8 @@ namespace Asztali_alkalmazás_Záródolgozat.Kivétel.VezérlőKivétel
 {
     class VezérlőKivételek : Exception
     {
+        public VezérlőKivételek(string üzenet)
+        :base(üzenet)
+        { }
     }
 }

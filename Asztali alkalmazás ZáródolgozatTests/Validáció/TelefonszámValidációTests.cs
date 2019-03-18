@@ -12,15 +12,11 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
     public class TelefonszámValidációTests
     {
         [TestMethod()]
-        public void TelefonszámValidációTest()
+        public void értékNullaTelefonszámTeszt()
         {
             Assert.Fail();
         }
 
-        [TestMethod()]
-        public void validácíóTest()
-        {
-            Assert.Fail();
-        }
+       
     }
 }

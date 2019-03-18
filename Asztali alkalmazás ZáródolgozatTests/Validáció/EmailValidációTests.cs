@@ -12,13 +12,13 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
     public class EmailValidációTests
     {
         [TestMethod()]
-        public void EmailValidációTest()
+        public void nincsKukacAzEmailbanTeszt()
         {
             Assert.Fail();
         }
 
         [TestMethod()]
-        public void validációTest()
+        public void üresEmailKivétel()
         {
             Assert.Fail();
         }

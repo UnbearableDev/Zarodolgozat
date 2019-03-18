@@ -4,41 +4,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Asztali_alkalmazás_Záródolgozat.Tár;
+using Asztali_alkalmazás_Záródolgozat.Adatbázis;
+using Asztali_alkalmazás_Záródolgozat.Nézet;
+using System.Data;
 
 namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
 {
     class MegrendelőVezérlő
     {
         private MegrendelőkKezelMegrendelőtF megrendelőketKezelőMetódusok;
+        private MySQLDatabaseInterface AdatbázisParancsok;
         
-       public void hozzáadniMegrendelőtMegrendelőkhöz( string email, string munka, string munkatípus, string név, int telefonszám, string város)
+        public void hozzáadniMegrendelőtMegrendelőkhöz( string email, string munka, string munkatípus, string név, int telefonszám, string város)
         {
 
-            try
-            {
+            
+            
                 int MegrendelőAzonosító = megrendelőketKezelőMetódusok.visszaadKövetkezőMegrendelőAzonosítót();
                 Megrendelő újMegrendelő = new Megrendelő(MegrendelőAzonosító, név, város, email, munka, munkatípus, telefonszám);
                 megrendelőketKezelőMetódusok.hozzáadMegrendelőt(újMegrendelő);
-            }
-            catch()
+            
+            
+            
+
+            
         }
         public void törölniMegrendelőtMegrendelőkböl(int azonosító)
         {
-            try
-            {
+            
+            
                 megrendelőketKezelőMetódusok.törölMegrendelőt(azonosító);
-            }
+        
         }
-        public void módosítaniMegrendelőtMegrendelőkhöz()
+        public void módosítaniMegrendelőtMegrendelőkhöz(string email, string munka, string munkatípus, string név, int telefonszám, string város)
         {
-            try
-            {
-
-            }
+       
         }
-        public void betölteniMegrendelőket()
+        public DataTable betölteniMegrendelőket( )
         {
-
+            DataTable adatok;
+            Kapcsolat k = new Kapcsolat();
+            AdatbázisParancsok = k.kapcsolodas();
+            AdatbázisParancsok.open();
+            adatok = AdatbázisParancsok.getToDataTable("SELECT * FROM megrendelok");
+            return adatok;
+            
         }
      
     }

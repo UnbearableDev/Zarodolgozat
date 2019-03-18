@@ -1,4 +1,4 @@
-﻿namespace Asztali_alkalmazás_Záródolgozat
+﻿namespace Asztali_alkalmazás_Záródolgozat.Nézet
 {
     partial class Multitool
     {
@@ -28,23 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonBetoltes = new System.Windows.Forms.Button();
             this.buttonHozzaadas = new System.Windows.Forms.Button();
             this.buttonSzerkesztes = new System.Windows.Forms.Button();
             this.buttonTorles = new System.Windows.Forms.Button();
             this.buttonKilepes = new System.Windows.Forms.Button();
-            this.textBoxMultiAzonosito = new System.Windows.Forms.TextBox();
             this.textBoxMultiNev = new System.Windows.Forms.TextBox();
             this.textBoxMultiEmail = new System.Windows.Forms.TextBox();
             this.textBoxMultiMegrendelestipusa = new System.Windows.Forms.TextBox();
             this.textBoxMultiMegrendeles = new System.Windows.Forms.TextBox();
             this.textBoxMultiVaros = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,40 +46,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxTelefonszam = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripLabel2,
-            this.toolStripLabel3});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(947, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(82, 22);
-            this.toolStripLabel1.Text = "Adminisztáció";
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(70, 22);
-            this.toolStripLabel2.Text = "Árkalkulálás";
-            // 
-            // toolStripLabel3
-            // 
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(44, 22);
-            this.toolStripLabel3.Text = "Kilépés";
             // 
             // dataGridView1
             // 
@@ -144,13 +106,6 @@
             this.buttonKilepes.Text = "Kilépés";
             this.buttonKilepes.UseVisualStyleBackColor = true;
             // 
-            // textBoxMultiAzonosito
-            // 
-            this.textBoxMultiAzonosito.Location = new System.Drawing.Point(826, 44);
-            this.textBoxMultiAzonosito.Name = "textBoxMultiAzonosito";
-            this.textBoxMultiAzonosito.Size = new System.Drawing.Size(100, 20);
-            this.textBoxMultiAzonosito.TabIndex = 7;
-            // 
             // textBoxMultiNev
             // 
             this.textBoxMultiNev.Location = new System.Drawing.Point(826, 83);
@@ -186,15 +141,6 @@
             this.textBoxMultiVaros.Name = "textBoxMultiVaros";
             this.textBoxMultiVaros.Size = new System.Drawing.Size(100, 20);
             this.textBoxMultiVaros.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(823, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Azonosító";
             // 
             // label2
             // 
@@ -270,25 +216,21 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxMultiVaros);
             this.Controls.Add(this.textBoxMultiMegrendeles);
             this.Controls.Add(this.textBoxMultiMegrendelestipusa);
             this.Controls.Add(this.textBoxMultiEmail);
             this.Controls.Add(this.textBoxMultiNev);
-            this.Controls.Add(this.textBoxMultiAzonosito);
             this.Controls.Add(this.buttonKilepes);
             this.Controls.Add(this.buttonTorles);
             this.Controls.Add(this.buttonSzerkesztes);
             this.Controls.Add(this.buttonHozzaadas);
             this.Controls.Add(this.buttonBetoltes);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.toolStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "Multitool";
             this.Text = "Multitool";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.Multitool_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -296,24 +238,17 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonBetoltes;
         private System.Windows.Forms.Button buttonHozzaadas;
         private System.Windows.Forms.Button buttonSzerkesztes;
         private System.Windows.Forms.Button buttonTorles;
         private System.Windows.Forms.Button buttonKilepes;
-        private System.Windows.Forms.TextBox textBoxMultiAzonosito;
         private System.Windows.Forms.TextBox textBoxMultiNev;
         private System.Windows.Forms.TextBox textBoxMultiEmail;
         private System.Windows.Forms.TextBox textBoxMultiMegrendelestipusa;
         private System.Windows.Forms.TextBox textBoxMultiMegrendeles;
         private System.Windows.Forms.TextBox textBoxMultiVaros;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

@@ -9,15 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Asztali_alkalmazás_Záródolgozat.Vezérlő;
 
-namespace Asztali_alkalmazás_Záródolgozat
+namespace Asztali_alkalmazás_Záródolgozat.Nézet
 {
     public partial class Multitool : Form
     {
         MegrendelőVezérlő vezérlő = new MegrendelőVezérlő();
+        DataTable MegrendelőDT = new DataTable();
         public Multitool()
         {
-            InitializeComponent();
            
+            InitializeComponent();
+            
+            dataGridView1.DataSource = MegrendelőDT;
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -37,12 +40,17 @@ namespace Asztali_alkalmazás_Záródolgozat
 
         private void buttonTorles_Click(object sender, EventArgs e)
         {
-            vezérlő.törölniMegrendelőtMegrendelőkböl()
+            vezérlő.törölniMegrendelőtMegrendelőkböl();
         }
 
         private void buttonBetoltes_Click(object sender, EventArgs e)
         {
-            vezérlő.betölteniMegrendelőket();
+           MegrendelőDT =  vezérlő.betölteniMegrendelőket();
+        }
+
+        private void Multitool_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,15 +12,11 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
     public class MunkaValidációTests
     {
         [TestMethod()]
-        public void MunkaValidációTest()
+        public void üresMunkaTeszt()
         {
             Assert.Fail();
         }
 
-        [TestMethod()]
-        public void validácíóTest()
-        {
-            Assert.Fail();
-        }
+       
     }
 }
