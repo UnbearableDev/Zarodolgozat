@@ -112,7 +112,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
                     return maximumAzonosító + 1;
                 else
                     return 1;
-            }
-        }
+         }
+        
     }
 }

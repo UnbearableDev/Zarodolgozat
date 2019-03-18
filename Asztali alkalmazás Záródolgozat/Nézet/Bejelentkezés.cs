@@ -21,5 +21,10 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
         {
 
         }
+
+        private void buttonMegse_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

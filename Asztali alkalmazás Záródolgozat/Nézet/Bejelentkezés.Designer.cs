@@ -53,6 +53,7 @@
             this.buttonMegse.TabIndex = 1;
             this.buttonMegse.Text = "Mégse";
             this.buttonMegse.UseVisualStyleBackColor = true;
+            this.buttonMegse.Click += new System.EventHandler(this.buttonMegse_Click);
             // 
             // label1
             // 

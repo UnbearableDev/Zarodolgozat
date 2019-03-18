@@ -30,17 +30,18 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
 
         private void buttonHozzaadas_Click(object sender, EventArgs e)
         {
-            vezérlő.hozzáadniMegrendelőtMegrendelőkhöz();
+
+            //vezérlő.hozzáadniMegrendelőtMegrendelőkhöz();
         }
 
         private void buttonSzerkesztes_Click(object sender, EventArgs e)
         {
-            vezérlő.módosítaniMegrendelőtMegrendelőkhöz();
+            //vezérlő.módosítaniMegrendelőtMegrendelőkhöz();
         }
 
         private void buttonTorles_Click(object sender, EventArgs e)
         {
-            vezérlő.törölniMegrendelőtMegrendelőkböl();
+            //vezérlő.törölniMegrendelőtMegrendelőkböl();
         }
 
         private void buttonBetoltes_Click(object sender, EventArgs e)
