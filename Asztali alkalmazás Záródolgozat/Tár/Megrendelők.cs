@@ -24,6 +24,13 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         {
             return megrendelők;
         }
-
+        public int getMaximumAzonosító()
+        {
+            int maximumMegrendelőAzonosító = -1;
+            foreach (Megrendelő m in megrendelők)
+                if (m.getAzonosító() > maximumMegrendelőAzonosító)
+                    maximumMegrendelőAzonosító = m.getAzonosító();
+            return maximumMegrendelőAzonosító;
+        }
     }
 }

@@ -14,6 +14,6 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         int számolMegrendelőt();
         Megrendelő keresMegrendelőtNévről(string név);
         bool létezikeMegrendelőNévről(string név);
-        int visszaadMegrendelőAzonosítót(string név);
+        int visszaadKövetkezőMegrendelőAzonosítót();
     }
 }

@@ -9,17 +9,32 @@ namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
 {
     class MegrendelőVezérlő
     {
-       public void hozzáadniMegrendelőtMegrendelőkhöz()
+        private MegrendelőkKezelMegrendelőtF megrendelőketKezelőMetódusok;
+        
+       public void hozzáadniMegrendelőtMegrendelőkhöz( string email, string munka, string munkatípus, string név, int telefonszám, string város)
         {
 
+            try
+            {
+                int MegrendelőAzonosító = megrendelőketKezelőMetódusok.visszaadKövetkezőMegrendelőAzonosítót();
+                Megrendelő újMegrendelő = new Megrendelő(MegrendelőAzonosító, név, város, email, munka, munkatípus, telefonszám);
+                megrendelőketKezelőMetódusok.hozzáadMegrendelőt(újMegrendelő);
+            }
+            catch()
         }
-        public void törölniMegrendelőtMegrendelőkböl()
+        public void törölniMegrendelőtMegrendelőkböl(int azonosító)
         {
-
+            try
+            {
+                megrendelőketKezelőMetódusok.törölMegrendelőt(azonosító);
+            }
         }
         public void módosítaniMegrendelőtMegrendelőkhöz()
         {
+            try
+            {
 
+            }
         }
         public void betölteniMegrendelőket()
         {

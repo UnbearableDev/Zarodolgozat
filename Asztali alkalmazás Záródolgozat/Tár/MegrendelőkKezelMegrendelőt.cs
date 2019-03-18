@@ -8,6 +8,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
 {
     partial class Megrendelők : MegrendelőkKezelMegrendelőtF
     {
+        private MegrendelőkF megrendelőkMetódusai;
         /// <summary>
         /// Megrendelő hozzáadása listához
         /// </summary>
@@ -97,16 +98,21 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         /// </summary>
         /// <param name="név">Az erre a célra használt név</param>
         /// <returns></returns>
-        public int visszaadMegrendelőAzonosítót(string név)
+        public int visszaadKövetkezőMegrendelőAzonosítót()
         {
-            foreach (Megrendelő m in megrendelők)
-            
-                if (m.getNév() == név)
-                
-                    return m.getAzonosító();
-                
-                 return -1;
-            
+           
+                int maximumAzonosító = -1;
+                foreach (Megrendelő m in megrendelők)
+                {
+                int megrendelőkMaximumMegrendelőAzonosító = megrendelőkMetódusai.getMaximumAzonosító();
+                    if (megrendelőkMaximumMegrendelőAzonosító > maximumAzonosító)
+                        maximumAzonosító = megrendelőkMaximumMegrendelőAzonosító;
+                }
+                if (maximumAzonosító > 0)
+                    return maximumAzonosító + 1;
+                else
+                    return 1;
+            }
         }
     }
 }

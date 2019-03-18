@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using MySql.Data.MySqlClient;
-using System.Data;
-//Console alkalmazás esetén
-//To add reference in c# program right click in your project folders shown in 
-//solution explorer on add references-> .Net -> select System.Windows.Forms. 
 using System.Windows.Forms;
+using System.Data;
 
-namespace ConnectToMysqlDatabase
+namespace Asztali_alkalmazás_Záródolgozat.Adatbázis
 {
     class MySQLDatabaseInterface
     {
