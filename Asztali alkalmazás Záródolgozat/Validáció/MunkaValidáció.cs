@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Asztali_alkalmazás_Záródolgozat.Kivétel.MunkaKivétel;
 
 namespace Asztali_alkalmazás_Záródolgozat.Validáció
 {
@@ -18,7 +19,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció
         {
             if(üresMunka())
             {
-
+                throw new üresMunkaKivétel("a Munka nem lehet üres");
             }
         
         }

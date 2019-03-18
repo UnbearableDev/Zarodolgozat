@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Kivétel.EmailKivétel
 {
-    class nincsKukacAzEmailbanException
+    class nincsKukacAzEmailbanKivétel : Exception
     {
+        public nincsKukacAzEmailbanKivétel(string üzenet)
+        :base(üzenet)
+        { }
     }
 }

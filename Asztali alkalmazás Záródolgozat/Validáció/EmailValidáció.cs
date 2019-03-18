@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Asztali_alkalmazás_Záródolgozat.Kivétel.EmailKivétel;
 
 namespace Asztali_alkalmazás_Záródolgozat.Validáció
 {
@@ -17,11 +18,11 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció
         {
             if (üresEmail())
             {
-
+                throw new üresEmailKivétel("Az email nem lehet üres");
             }
             if(nincsKukacAzEmailban())
             {
-
+                throw new nincsKukacAzEmailbanKivétel("Az emailben kötelező a kukac használata");
             }
             
 

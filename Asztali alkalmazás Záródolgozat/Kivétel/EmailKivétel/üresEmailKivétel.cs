@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Kivétel.EmailKivétel
 {
-    class üresEmailException
+    class üresEmailKivétel : Exception
     {
+        public üresEmailKivétel(string üzenet)
+        :base(üzenet)
+        { }
     }
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Asztali_alkalmazás_Záródolgozat.Kivétel.AzonosítóKivétel;
+
 
 namespace Asztali_alkalmazás_Záródolgozat.Validáció
 {
@@ -17,11 +19,11 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció
         {
             if(értékNullaAzonosító())
             {
-
+                throw new értékNullaAzonosítóKivétel("Az azonosító értéke nem lehet nulla");
             }
             if(nemSzámAzonosító())
             {
-
+                throw new nemSzámAzonosítóKivétel("Az azonosító értéke csak szám lehet");
             }
         }
 

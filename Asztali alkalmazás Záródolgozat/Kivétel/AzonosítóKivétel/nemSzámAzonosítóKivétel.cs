@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Kivétel.AzonosítóKivétel
 {
-    class nemSzámAzonosítóException
+    class nemSzámAzonosítóKivétel : Exception
     {
+        public nemSzámAzonosítóKivétel(string üzenet)
+        :base(üzenet)
+        { }
     }
 }

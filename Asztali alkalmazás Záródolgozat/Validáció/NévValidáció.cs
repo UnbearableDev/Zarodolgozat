@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Asztali_alkalmazás_Záródolgozat.Kivétel.NévKivétel;
 
 namespace Asztali_alkalmazás_Záródolgozat.Validáció
 {
@@ -18,11 +19,11 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció
         {
             if (üresNév())
             {
-
+                throw new üresNévKivétel("Név nem lehet üres");
             }
             if(nemNagyBetűNév())
             {
-
+                throw new nemNagyBetűNévKivétel("Névnek nagy betűnek kell lennie");
             }
         }
 

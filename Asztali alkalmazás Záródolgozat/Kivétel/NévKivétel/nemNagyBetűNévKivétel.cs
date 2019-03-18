@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Kivétel.NévKivétel
 {
-    class nemNagyBetűNévException
+    class nemNagyBetűNévKivétel : Exception
     {
+        public nemNagyBetűNévKivétel(string üzenet)
+        :base(üzenet)
+        {}
     }
 }
