@@ -26,5 +26,18 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
         {
 
         }
+        public int getTelefonszámSzerkForm()
+        { return Convert.ToInt32(textBoxTelefonszám.Text); }
+        public string getNévSzerkForm()
+        { return textBoxSzerkNev.Text; }
+        public string getVárosSzerkForm()
+        { return textBoxSzerkVaros.Text; }
+        public string getMunkaSzerkForm()
+        { return textBoxSzerkMegrendeles.Text; }
+        public string getMunkatípusSzerkForm()
+        { return textBoxSzerkMegrendelestipusa.Text; }
+        public string getEmailSzerkForm()
+        { return textBoxSzerkEmail.Text; }
+
     }
 }

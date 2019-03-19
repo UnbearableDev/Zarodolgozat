@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Tár
 {
-    partial class Megrendelők : MegrendelőkKezelMegrendelőtF
+    public partial class Megrendelők : IMegrendelőkKezelMegrendelőtF
     {
-        private MegrendelőkF megrendelőkMetódusai;
+        
+        
         /// <summary>
         /// Megrendelő hozzáadása listához
         /// </summary>
@@ -104,7 +105,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
                 int maximumAzonosító = -1;
                 foreach (Megrendelő m in megrendelők)
                 {
-                int megrendelőkMaximumMegrendelőAzonosító = megrendelőkMetódusai.getMaximumAzonosító();
+                int megrendelőkMaximumMegrendelőAzonosító = getMaximumAzonosító();
                     if (megrendelőkMaximumMegrendelőAzonosító > maximumAzonosító)
                         maximumAzonosító = megrendelőkMaximumMegrendelőAzonosító;
                 }

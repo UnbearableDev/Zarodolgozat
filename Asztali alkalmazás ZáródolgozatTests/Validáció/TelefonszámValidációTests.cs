@@ -14,7 +14,17 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
         [TestMethod()]
         public void értékNullaTelefonszámTeszt()
         {
-            Assert.Fail();
+            try
+            {
+                TelefonszámValidáció Tv = new TelefonszámValidáció(0);
+                Tv.validácíó();
+
+            }
+            catch(Exception e)
+            {
+                Assert.Fail("0 Telefonszám eredményre rossz kivételt dobott");
+            }
+            Assert.Fail("0 Telefonszám eredményre nem dobott kivételt");
         }
 
        

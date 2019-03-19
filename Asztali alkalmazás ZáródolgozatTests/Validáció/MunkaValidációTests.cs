@@ -14,7 +14,16 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
         [TestMethod()]
         public void üresMunkaTeszt()
         {
-            Assert.Fail();
+            try
+            {
+                MunkaValidáció Mv = new MunkaValidáció("");
+                Mv.validácíó();
+            }
+            catch(Exception e)
+            {
+                Assert.Fail("Üres munka szöveg nem megfelelő kivételt dobott");
+            }
+            Assert.Fail("Üres munka szöveg nem dobott kivételt");
         }
 
        

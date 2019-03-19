@@ -44,6 +44,7 @@
             this.buttonBejelentkezes.TabIndex = 0;
             this.buttonBejelentkezes.Text = "Bejelentkezés";
             this.buttonBejelentkezes.UseVisualStyleBackColor = true;
+            this.buttonBejelentkezes.Click += new System.EventHandler(this.buttonBejelentkezes_Click);
             // 
             // buttonMegse
             // 

@@ -14,13 +14,31 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
         [TestMethod()]
         public void nemNagyBetűNévTeszt()
         {
-            Assert.Fail();
+            try
+            {
+                NévValidáció Nv = new NévValidáció("jános");
+                Nv.validácíó();
+            }
+            catch(Exception e)
+            {
+                Assert.Fail("Kisbetűre névben rossz kivételt dobott");
+            }
+            Assert.Fail("Kisbetűre névben nem dobott kivételt");
         }
 
         [TestMethod()]
         public void üresNévTeszt()
         {
-            Assert.Fail();
+            try
+            {
+                NévValidáció Nv = new NévValidáció("");
+                Nv.validácíó();
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Üres névre rossz kivételt dobott");
+            }
+            Assert.Fail("Üres névre nem dobott kivételt");
         }
     }
 }

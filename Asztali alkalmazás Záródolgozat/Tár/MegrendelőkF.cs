@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Tár
 {
-    interface MegrendelőkF
+ interface IMegrendelőkF
     {
         List<Megrendelő> getMegrendelők();
         int getMaximumAzonosító();

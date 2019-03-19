@@ -19,12 +19,20 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
 
         private void Bejelentkezés_Load(object sender, EventArgs e)
         {
-
+            
+            
         }
 
         private void buttonMegse_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonBejelentkezes_Click(object sender, EventArgs e)
+        {
+            Multitool MT = new Multitool();
+            MT.Show();
+            this.Hide();
         }
     }
 }

@@ -105,6 +105,7 @@
             this.buttonKilepes.TabIndex = 6;
             this.buttonKilepes.Text = "Kilépés";
             this.buttonKilepes.UseVisualStyleBackColor = true;
+            this.buttonKilepes.Click += new System.EventHandler(this.buttonKilepes_Click);
             // 
             // textBoxMultiNev
             // 

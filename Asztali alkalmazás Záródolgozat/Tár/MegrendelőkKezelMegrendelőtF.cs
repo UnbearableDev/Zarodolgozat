@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Tár
 {
-    interface MegrendelőkKezelMegrendelőtF
+   interface IMegrendelőkKezelMegrendelőtF
     {
         void hozzáadMegrendelőt(Megrendelő megrendelő);
         void törölMegrendelőt(int azonosító);

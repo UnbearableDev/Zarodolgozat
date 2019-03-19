@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Tár
 {
-    class Megrendelő
+  public  class Megrendelő
     {
         private int azonosító;
         private string név;

@@ -14,7 +14,17 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
         [TestMethod()]
         public void üresMunkatípusTeszt()
         {
-            Assert.Fail();
+            try
+            {
+                MunkatípusValidáció Mt = new MunkatípusValidáció("");
+                Mt.validácíó();
+                }
+            catch(Exception e)
+            {
+                Assert.Fail("Üres Munkatípus szövegre rossz kivételt dobott");
+
+            }
+            Assert.Fail("Üres Munkatípus szövegre nem dobott kivételt");
         }
 
        

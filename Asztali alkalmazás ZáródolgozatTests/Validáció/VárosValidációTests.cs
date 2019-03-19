@@ -14,7 +14,16 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
         [TestMethod()]
         public void üresVárosTeszt()
         {
-            Assert.Fail();
+           try
+            {
+                VárosValidáció Vv = new VárosValidáció("");
+                Vv.validácíó();
+            }
+            catch(Exception e)
+            {
+                Assert.Fail("Üres város szövegre rossz kivételt dobott");
+            }
+            Assert.Fail(" Üres város szövegre nem dobott kivételt");
         }
 
      

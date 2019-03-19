@@ -14,13 +14,31 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
         [TestMethod()]
         public void nincsKukacAzEmailbanTeszt()
         {
-            Assert.Fail();
+            try
+            {
+                EmailValidáció Ev = new EmailValidáció("asdasd");
+                Ev.validáció();
+            }
+            catch(Exception e)
+            {
+                Assert.Fail("Kukac nélküli szövegre rossz kivételt dobott");
+            }
+            Assert.Fail("Kukac nélküli szövegre nem dob kivételt");
         }
 
         [TestMethod()]
         public void üresEmailKivétel()
         {
-            Assert.Fail();
+            try
+            {
+                EmailValidáció Ev = new EmailValidáció("");
+                Ev.validáció();
+            }
+            catch(Exception e)
+            {
+                Assert.Fail("Üres Emailre rossz kivételt dob");
+            }
+            Assert.Fail("Üres Emailre nem dob kivételt");
         }
     }
 }

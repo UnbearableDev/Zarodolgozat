@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Tár
 {
-    partial class Megrendelők : MegrendelőkF
+   public partial class Megrendelők : IMegrendelőkF
     {
         private List<Megrendelő> megrendelők;
         /// <summary>

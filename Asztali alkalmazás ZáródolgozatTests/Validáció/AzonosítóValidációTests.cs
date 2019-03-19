@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Asztali_alkalmazás_Záródolgozat.Validáció;
+
 
 
 namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
@@ -38,13 +38,14 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
         {
             try
             {
-                AzonosítóValidáció Av = new AzonosítóValidáció("a");
+                AzonosítóValidáció Av = new AzonosítóValidáció(Convert.ToInt32("a"));
                 Av.validácíó();
             }
             catch(Exception e)
             {
-
+                Assert.Fail("Nem szám értékre rossz kivételt dob");
             }
+            Assert.Fail("Nem szám értékre nem dob kivételt");
         }
     }
 }

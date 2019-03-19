@@ -10,19 +10,21 @@ using System.Data;
 
 namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
 {
-    class MegrendelőVezérlő
+    class MegrendelőVezérlő 
     {
-        private MegrendelőkKezelMegrendelőtF megrendelőketKezelőMetódusok;
+        Megrendelők m = new Megrendelők();
         private MySQLDatabaseInterface AdatbázisParancsok;
         
         public void hozzáadniMegrendelőtMegrendelőkhöz( string email, string munka, string munkatípus, string név, int telefonszám, string város)
         {
 
-            
-            
-                int MegrendelőAzonosító = megrendelőketKezelőMetódusok.visszaadKövetkezőMegrendelőAzonosítót();
+
+
+
+
+            int MegrendelőAzonosító = m.visszaadKövetkezőMegrendelőAzonosítót();
                 Megrendelő újMegrendelő = new Megrendelő(MegrendelőAzonosító, név, város, email, munka, munkatípus, telefonszám);
-                megrendelőketKezelőMetódusok.hozzáadMegrendelőt(újMegrendelő);
+                m.hozzáadMegrendelőt(újMegrendelő);
             
             
             
@@ -33,13 +35,13 @@ namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
         {
             
             
-                megrendelőketKezelőMetódusok.törölMegrendelőt(azonosító);
+                m.törölMegrendelőt(azonosító);
         
         }
         public void módosítaniMegrendelőtMegrendelőkhöz(int állandóAzonosító,string email, string munka, string munkatípus, string név, int telefonszám, string város)
         {
             Megrendelő módosítottMegrendelő = new Megrendelő(állandóAzonosító, név, város, email, munka, munkatípus, telefonszám);
-            megrendelőketKezelőMetódusok.módosítMegrendelőt(állandóAzonosító, módosítottMegrendelő);
+            m.módosítMegrendelőt(állandóAzonosító, módosítottMegrendelő);
         }
         public DataTable betölteniMegrendelőket( )
         {
