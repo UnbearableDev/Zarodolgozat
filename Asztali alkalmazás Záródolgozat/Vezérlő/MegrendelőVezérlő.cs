@@ -36,9 +36,10 @@ namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
                 megrendelőketKezelőMetódusok.törölMegrendelőt(azonosító);
         
         }
-        public void módosítaniMegrendelőtMegrendelőkhöz(string email, string munka, string munkatípus, string név, int telefonszám, string város)
+        public void módosítaniMegrendelőtMegrendelőkhöz(int állandóAzonosító,string email, string munka, string munkatípus, string név, int telefonszám, string város)
         {
-       
+            Megrendelő módosítottMegrendelő = new Megrendelő(állandóAzonosító, név, város, email, munka, munkatípus, telefonszám);
+            megrendelőketKezelőMetódusok.módosítMegrendelőt(állandóAzonosító, módosítottMegrendelő);
         }
         public DataTable betölteniMegrendelőket( )
         {

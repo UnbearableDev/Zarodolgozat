@@ -31,17 +31,23 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
         private void buttonHozzaadas_Click(object sender, EventArgs e)
         {
 
-            //vezérlő.hozzáadniMegrendelőtMegrendelőkhöz();
+            vezérlő.hozzáadniMegrendelőtMegrendelőkhöz(Convert.ToString(textBoxMultiEmail),Convert.ToString(textBoxMultiMegrendeles),Convert.ToString(textBoxMultiMegrendelestipusa),Convert.ToString(textBoxMultiNev),Convert.ToInt32(textBoxTelefonszam),Convert.ToString(textBoxMultiVaros));
         }
 
         private void buttonSzerkesztes_Click(object sender, EventArgs e)
         {
-            //vezérlő.módosítaniMegrendelőtMegrendelőkhöz();
+            Szerkesztés szerkform = new Szerkesztés();
+            szerkform.ShowDialog();
+            if (szerkform.ShowDialog() == DialogResult.OK)
+            {
+                vezérlő.módosítaniMegrendelőtMegrendelőkhöz(visszaadVálasztottAzonosítót,);
+            }
+
         }
 
         private void buttonTorles_Click(object sender, EventArgs e)
         {
-            //vezérlő.törölniMegrendelőtMegrendelőkböl();
+            vezérlő.törölniMegrendelőtMegrendelőkböl(visszaadVálasztottAzonosítót());
         }
 
         private void buttonBetoltes_Click(object sender, EventArgs e)
@@ -51,7 +57,11 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
 
         private void Multitool_Load(object sender, EventArgs e)
         {
-
+           
+        }
+        private int visszaadVálasztottAzonosítót()
+        {
+            return  Convert.ToInt32(dataGridView1.SelectedCells[0].Value);
         }
     }
 }

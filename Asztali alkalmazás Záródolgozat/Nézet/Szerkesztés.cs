@@ -21,5 +21,10 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
         {
 
         }
+
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
