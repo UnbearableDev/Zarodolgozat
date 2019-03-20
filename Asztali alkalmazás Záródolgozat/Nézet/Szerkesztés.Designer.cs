@@ -46,6 +46,8 @@
             // 
             // buttonOK
             // 
+            this.buttonOK.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonOK.Location = new System.Drawing.Point(91, 330);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
@@ -56,6 +58,7 @@
             // 
             // buttonMégse
             // 
+            this.buttonMégse.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonMégse.Location = new System.Drawing.Point(91, 359);
             this.buttonMégse.Name = "buttonMégse";
             this.buttonMégse.Size = new System.Drawing.Size(75, 23);

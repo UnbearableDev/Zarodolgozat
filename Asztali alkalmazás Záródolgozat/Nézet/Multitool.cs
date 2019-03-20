@@ -16,6 +16,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
     {
         MegrendelőVezérlő vezérlő = new MegrendelőVezérlő();
         DataTable MegrendelőDT = new DataTable();
+        
         public Multitool()
         {
            
@@ -39,12 +40,13 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
                 Convert.ToInt32(textBoxTelefonszam.Text),
                 textBoxMultiVaros.Text);
             datagridviewFrissités();
+            
         }
 
         private void buttonSzerkesztes_Click(object sender, EventArgs e)
         {
             Szerkesztés szerkform = new Szerkesztés();
-            szerkform.ShowDialog();
+           
             if (szerkform.ShowDialog() == DialogResult.OK)
             {
                 vezérlő.módosítaniMegrendelőtMegrendelőkhöz(
@@ -73,7 +75,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
 
         private void Multitool_Load(object sender, EventArgs e)
         {
-           
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
         private int visszaadVálasztottAzonosítót()
         {
@@ -81,7 +83,8 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
         }
         private void datagridviewFrissités()
         {
-            MegrendelőDT = vezérlő.betölteniMegrendelőket();
+            MegrendelőDT = vezérlő.adatokFrissitése();
+            dataGridView1.DataSource = MegrendelőDT;
         }
 
         private void buttonKilepes_Click(object sender, EventArgs e)

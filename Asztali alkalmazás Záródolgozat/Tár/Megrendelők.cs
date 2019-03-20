@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Asztali_alkalmazás_Záródolgozat.Tár
 {
-   public partial class Megrendelők : IMegrendelőkF
+    public partial class Megrendelők : IMegrendelőkF
     {
         private List<Megrendelő> megrendelők;
         /// <summary>
@@ -32,5 +32,6 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
                     maximumMegrendelőAzonosító = m.getAzonosító();
             return maximumMegrendelőAzonosító;
         }
+
     }
 }

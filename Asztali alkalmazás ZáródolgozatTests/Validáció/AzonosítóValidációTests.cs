@@ -8,8 +8,11 @@ using System.Threading.Tasks;
 
 
 
+
+
 namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
 {
+    
     [TestClass()]
     public class AzonosítóValidációTests
     {
@@ -41,7 +44,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
                 AzonosítóValidáció Av = new AzonosítóValidáció(Convert.ToInt32("a"));
                 Av.validácíó();
             }
-            catch(Exception e)
+            catch()
             {
                 Assert.Fail("Nem szám értékre rossz kivételt dob");
             }

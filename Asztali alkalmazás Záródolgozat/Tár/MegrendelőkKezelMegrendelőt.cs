@@ -3,13 +3,74 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Asztali_alkalmazás_Záródolgozat.Adatbázis;
+using System.Diagnostics;
+using MySql.Data.MySqlClient;
+using System.Data;
+
 
 namespace Asztali_alkalmazás_Záródolgozat.Tár
 {
     public partial class Megrendelők : IMegrendelőkKezelMegrendelőtF
     {
-        
-        
+        private MySQLDatabaseInterface AdatbázisParancsok;
+        public DataTable MegrendelokDT;
+        private Kapcsolat Kapcs = new Kapcsolat();
+        public List<Megrendelő> feltöltMegrendelőkAdatbázisból()
+        {
+            string connectionString = Kapcs.connectionString();
+           
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new Exception("Adatbázis megnyitása nem lehetséges");
+            }
+            string query = "SELECT * FROM adminisztracio";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dr;
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Megrendelő m = new Megrendelő(
+                        Convert.ToInt32(dr["azonosito"]),
+                        dr["nev"].ToString(),
+                        dr["varos"].ToString(),
+                         dr["email"].ToString(),
+                          dr["munka"].ToString(),
+                           dr["munkatípus"].ToString(),
+                        Convert.ToInt32(dr["telefonszám"]));
+                    megrendelők.Add(m);
+                }
+                dr.Close();
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new Exception("Hibás lekérdezés.");
+            }
+            return megrendelők;
+
+        }
+        public DataTable feltöltListábólAdattáblába()
+        {
+            Kapcsolat k = new Kapcsolat();
+            AdatbázisParancsok = k.kapcsolodas();
+            AdatbázisParancsok.open();
+            MegrendelokDT = AdatbázisParancsok.getToDataTable("SELECT * FROM adminisztracio");
+            foreach(Megrendelő m in megrendelők)
+            {
+                MegrendelokDT.Rows.Add(m.getAzonosító(), m.getNév(), m.getVáros(), m.getEmail(), m.getMunka(), m.getMunkatipus(), m.getTelefonszám());
+            }
+            return MegrendelokDT;
+        }
         /// <summary>
         /// Megrendelő hozzáadása listához
         /// </summary>
@@ -116,4 +177,5 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
          }
         
     }
+
 }
