@@ -44,7 +44,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Validáció.Tests
                 AzonosítóValidáció Av = new AzonosítóValidáció(Convert.ToInt32("a"));
                 Av.validácíó();
             }
-            catch()
+            catch(Exception e)
             {
                 Assert.Fail("Nem szám értékre rossz kivételt dob");
             }

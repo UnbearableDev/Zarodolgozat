@@ -7,6 +7,7 @@ using Asztali_alkalmazás_Záródolgozat.Tár;
 using Asztali_alkalmazás_Záródolgozat.Adatbázis;
 using Asztali_alkalmazás_Záródolgozat.Nézet;
 using System.Data;
+using System.Diagnostics;
 
 namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
 {
@@ -21,10 +22,10 @@ namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
             int MegrendelőAzonosító = m.visszaadKövetkezőMegrendelőAzonosítót();
                 Megrendelő újMegrendelő = new Megrendelő(MegrendelőAzonosító, név, város, email, munka, munkatípus, telefonszám);
                 m.hozzáadMegrendelőt(újMegrendelő);
-            Kapcsolat k = new Kapcsolat();
-            AdatbázisParancsok = k.kapcsolodas();
-            AdatbázisParancsok.open();
-            AdatbázisParancsok.updateChangesInTable(m.feltöltListábólAdattáblába());
+          //  Kapcsolat k = new Kapcsolat();
+           // AdatbázisParancsok = k.kapcsolodas();
+           // AdatbázisParancsok.open();
+           // AdatbázisParancsok.updateChangesInTable(m.feltöltListábólAdattáblába());
            
 
         }
@@ -42,17 +43,22 @@ namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
         }
         public DataTable betölteniMegrendelőket( )
         {
-            m.feltöltMegrendelőkAdatbázisból();
+            
             Kapcsolat k = new Kapcsolat();
             AdatbázisParancsok = k.kapcsolodas();
             AdatbázisParancsok.open();
-            adatok = m.feltöltListábólAdattáblába(); 
+            adatok = m.feltöltListábólAdattáblába();
+            AdatbázisParancsok.close();
             return adatok;
         }
         public DataTable adatokFrissitése()
         {
             DataTable DT = m.feltöltListábólAdattáblába();
             return DT;
+        }
+        public void feltöltMegrendelőketAdatbázisból()
+        {
+            m.feltöltMegrendelőkAdatbázisból();
         }
      
     }

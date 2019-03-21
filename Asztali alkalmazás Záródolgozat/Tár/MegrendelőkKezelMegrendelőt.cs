@@ -13,8 +13,8 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
 {
     public partial class Megrendelők : IMegrendelőkKezelMegrendelőtF
     {
-        private MySQLDatabaseInterface AdatbázisParancsok;
-        public DataTable MegrendelokDT;
+        private MySQLDatabaseInterface AdatbázisParancsok = new MySQLDatabaseInterface();
+        public DataTable MegrendelokDT = new DataTable();
         private Kapcsolat Kapcs = new Kapcsolat();
         public List<Megrendelő> feltöltMegrendelőkAdatbázisból()
         {
@@ -44,8 +44,8 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
                         dr["varos"].ToString(),
                          dr["email"].ToString(),
                           dr["munka"].ToString(),
-                           dr["munkatípus"].ToString(),
-                        Convert.ToInt32(dr["telefonszám"]));
+                           dr["munkatipus"].ToString(),
+                        Convert.ToInt32(dr["telefonszam"]));
                     megrendelők.Add(m);
                 }
                 dr.Close();
@@ -69,6 +69,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
             {
                 MegrendelokDT.Rows.Add(m.getAzonosító(), m.getNév(), m.getVáros(), m.getEmail(), m.getMunka(), m.getMunkatipus(), m.getTelefonszám());
             }
+            AdatbázisParancsok.close();
             return MegrendelokDT;
         }
         /// <summary>
@@ -163,7 +164,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         public int visszaadKövetkezőMegrendelőAzonosítót()
         {
            
-                int maximumAzonosító = -1;
+                int maximumAzonosító = 0;
                 foreach (Megrendelő m in megrendelők)
                 {
                 int megrendelőkMaximumMegrendelőAzonosító = getMaximumAzonosító();

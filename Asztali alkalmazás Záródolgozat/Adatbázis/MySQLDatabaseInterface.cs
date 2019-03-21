@@ -130,7 +130,8 @@ namespace Asztali_alkalmazás_Záródolgozat.Adatbázis
                                     + "DATABASE=" + database + ";"
                                     + "UID=" + username + ";"
                                     + "PASSWORD=" + password + ";"
-                                    + "PORT=" + port + ";";
+                                    + "PORT=" + port + ";"
+                                    + "SslMode= none";
             try
             {
                 connection = new MySqlConnection(connectionString);

@@ -16,6 +16,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Adatbázis
             mdi.setErrorToGraphicalUserInterface(false);
             mdi.setConnectionServerData("localhost", "web_asztali_adatbazis", "3306");
             mdi.setConnectionUserData("root", "");
+           
             mdi.makeConnectionToDatabase();
 
             return mdi;
