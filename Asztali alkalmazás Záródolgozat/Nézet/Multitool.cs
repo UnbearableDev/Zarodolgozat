@@ -74,7 +74,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
         {
             MegrendelőDT = vezérlő.betölteniMegrendelőket();
             dataGridView1.DataSource = MegrendelőDT;
-           // AdatbázisParancsok.updateChangesInTable(MegrendelőDT);
+          
 
         }
 
@@ -85,7 +85,8 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
         }
         private int visszaadVálasztottAzonosítót()
         {
-            int Érték = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()); ;
+            DataGridViewRow row = this.dataGridView1.SelectedRows[0];
+            int Érték = Convert.ToInt32(row.Cells["azonosito"].Value.ToString());
             return Érték;
            
 

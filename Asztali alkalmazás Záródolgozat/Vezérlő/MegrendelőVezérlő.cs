@@ -28,13 +28,14 @@ namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
         {
 
                 m.törölMegrendelőt(azonosító);
-            AdatbázisParancsok.updateChangesInTable(m.feltöltListábólAdattáblába());
+         
         }
-        public void módosítaniMegrendelőtMegrendelőkhöz(int állandóAzonosító,string email, string munka, string munkatípus, string név, int telefonszám, string város)
+        public DataTable módosítaniMegrendelőtMegrendelőkhöz(int állandóAzonosító,string email, string munka, string munkatípus, string név, int telefonszám, string város)
         {
             Megrendelő módosítottMegrendelő = new Megrendelő(állandóAzonosító, név, város, email, munka, munkatípus, telefonszám);
-            m.módosítMegrendelőt(állandóAzonosító, módosítottMegrendelő);
-            AdatbázisParancsok.updateChangesInTable(m.feltöltListábólAdattáblába());
+            
+            DataTable d = m.módosítMegrendelőt(állandóAzonosító, módosítottMegrendelő);
+            return d;
         }
         public DataTable betölteniMegrendelőket( )
         {

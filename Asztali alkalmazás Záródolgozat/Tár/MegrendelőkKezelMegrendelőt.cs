@@ -82,18 +82,18 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
             Kapcsolat k = new Kapcsolat();
             AdatbázisParancsok = k.kapcsolodas();
             AdatbázisParancsok.open();
-            DataTable add = feltöltListábólAdattáblába();
+            DataTable AdatHozzáad = feltöltListábólAdattáblába();
             AdatbázisParancsok.getToDataTable("SELECT * FROM adminisztacio");
-            add.Rows.Add(megrendelő.getAzonosító(),
+            AdatHozzáad.Rows.Add(megrendelő.getAzonosító(),
                 megrendelő.getNév(),
                 megrendelő.getVáros(),
                 megrendelő.getEmail(),
                 megrendelő.getMunka(),
                 megrendelő.getMunkatipus(),
                 megrendelő.getTelefonszám());
-            AdatbázisParancsok.updateChangesInTable(add);
+            AdatbázisParancsok.updateChangesInTable(AdatHozzáad);
             AdatbázisParancsok.close();
-            return add;
+            return AdatHozzáad;
         }
         /// <summary>
         /// Megrendelő törlése listából az index segitségével
@@ -117,18 +117,33 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         /// </summary>
         /// <param name="azonosító">Megrendelő keresésére használt azonosító</param>
         /// <param name="Újmegrendelő">Már módosított megrendelő</param>
-        public void módosítMegrendelőt(int azonosító, Megrendelő Újmegrendelő)
+        public DataTable módosítMegrendelőt(int azonosító, Megrendelő Újmegrendelő)
         {
-            int index = 0;
-            foreach (Megrendelő m in megrendelők)
+            string connectionString = Kapcs.connectionString();
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
             {
-                if (m.getAzonosító() == azonosító)
-                {
-                    m.frissités(Újmegrendelő);
-                    return;
-                }
-                index = index + 1;
+                connection.Open();
             }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new Exception("Adatbázis megnyitása nem lehetséges");
+            }
+            string query = "SELECT * FROM adminisztracio";
+            using (MySqlCommand command = new MySqlCommand(query, connection))
+            {
+                command.ExecuteNonQuery();
+            }
+
+            connection.Close();
+            
+            Kapcsolat k = new Kapcsolat();
+            AdatbázisParancsok = k.kapcsolodas();
+            AdatbázisParancsok.open();
+            DataTable AdatMódosít = AdatbázisParancsok.getToDataTable("SELECT * FROM adminisztacio");
+            return AdatMódosít;
         }
         /// <summary>
         /// Megrendelők számolása
@@ -178,9 +193,9 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         /// <returns></returns>
         public int visszaadKövetkezőMegrendelőAzonosítót()
         {
+           return Convert.ToInt32(MegrendelokDT.Rows[MegrendelokDT.Rows.Count-1].ItemArray[0].ToString())+1;
 
-
-            return MegrendelokDT.Rows.Count + 1;
+           // return MegrendelokDT.Rows.Count + 1;
   
          }
         
