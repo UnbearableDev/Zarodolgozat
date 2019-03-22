@@ -19,15 +19,10 @@ namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
         
         public DataTable hozzáadniMegrendelőtMegrendelőkhöz( string email, string munka, string munkatípus, string név, int telefonszám, string város)
         {
-            int MegrendelőAzonosító = m.visszaadKövetkezőMegrendelőAzonosítót();
-                Megrendelő újMegrendelő = new Megrendelő(MegrendelőAzonosító, név, város, email, munka, munkatípus, telefonszám);
-             DataTable d =  m.hozzáadMegrendelőt(újMegrendelő);
-            Kapcsolat k = new Kapcsolat();
-            AdatbázisParancsok = k.kapcsolodas();
-            AdatbázisParancsok.open();
-            AdatbázisParancsok.updateChangesInTable(betölteniMegrendelőket());
-            AdatbázisParancsok.close();
-            return d;
+          int MegrendelőAzonosító = m.visszaadKövetkezőMegrendelőAzonosítót();
+          Megrendelő újMegrendelő = new Megrendelő(MegrendelőAzonosító, név, város, email, munka, munkatípus, telefonszám);
+          DataTable d =  m.hozzáadMegrendelőt(újMegrendelő);
+          return d;
         }
         public void törölniMegrendelőtMegrendelőkböl(int azonosító)
         {
@@ -43,19 +38,11 @@ namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
         }
         public DataTable betölteniMegrendelőket( )
         {
-            
-            Kapcsolat k = new Kapcsolat();
-            AdatbázisParancsok = k.kapcsolodas();
-            AdatbázisParancsok.open();
-            adatok = m.feltöltListábólAdattáblába();
-            AdatbázisParancsok.close();
-            return adatok;
-        }
-        public DataTable adatokFrissitése()
-        {
             DataTable DT = m.feltöltListábólAdattáblába();
+           // feltöltMegrendelőketAdatbázisból();
             return DT;
         }
+     
         public void feltöltMegrendelőketAdatbázisból()
         {
             m.feltöltMegrendelőkAdatbázisból();

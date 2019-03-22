@@ -35,13 +35,13 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
         private void buttonHozzaadas_Click(object sender, EventArgs e)
         {
 
-          MegrendelőDT =  vezérlő.hozzáadniMegrendelőtMegrendelőkhöz(textBoxMultiEmail.Text,
+            MegrendelőDT =  vezérlő.hozzáadniMegrendelőtMegrendelőkhöz(textBoxMultiEmail.Text,
                 textBoxMultiMegrendeles.Text,
                 textBoxMultiMegrendelestipusa.Text,
                 textBoxMultiNev.Text,
                 Convert.ToInt32(textBoxTelefonszam.Text),
                 textBoxMultiVaros.Text);
-           
+            dataGridView1.DataSource = MegrendelőDT;
             
         }
 
@@ -72,8 +72,9 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
 
         private void buttonBetoltes_Click(object sender, EventArgs e)
         {
-            MegrendelőDT = vezérlő.adatokFrissitése();
+            MegrendelőDT = vezérlő.betölteniMegrendelőket();
             dataGridView1.DataSource = MegrendelőDT;
+           // AdatbázisParancsok.updateChangesInTable(MegrendelőDT);
 
         }
 

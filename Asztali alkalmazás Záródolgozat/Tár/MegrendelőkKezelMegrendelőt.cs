@@ -16,7 +16,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         private MySQLDatabaseInterface AdatbázisParancsok = new MySQLDatabaseInterface();
         public DataTable MegrendelokDT = new DataTable();
         private Kapcsolat Kapcs = new Kapcsolat();
-        public List<Megrendelő> feltöltMegrendelőkAdatbázisból()
+        public void feltöltMegrendelőkAdatbázisból()
         {
             string connectionString = Kapcs.connectionString();
            
@@ -56,7 +56,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
                 Debug.WriteLine(e.Message);
                 throw new Exception("Hibás lekérdezés.");
             }
-            return megrendelők;
+        
 
         }
         public DataTable feltöltListábólAdattáblába()
@@ -69,6 +69,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
             {
                 MegrendelokDT.Rows.Add(m.getAzonosító(), m.getNév(), m.getVáros(), m.getEmail(), m.getMunka(), m.getMunkatipus(), m.getTelefonszám());
             }
+    
             AdatbázisParancsok.close();
             return MegrendelokDT;
         }
@@ -78,8 +79,20 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         /// <param name="megrendelő">A hozzáadásra kerülő megrendelő</param>
         public DataTable hozzáadMegrendelőt(Megrendelő megrendelő)
         {
-            megrendelők.Add(megrendelő);
-           DataTable add = feltöltListábólAdattáblába();
+            Kapcsolat k = new Kapcsolat();
+            AdatbázisParancsok = k.kapcsolodas();
+            AdatbázisParancsok.open();
+            DataTable add = feltöltListábólAdattáblába();
+            AdatbázisParancsok.getToDataTable("SELECT * FROM adminisztacio");
+            add.Rows.Add(megrendelő.getAzonosító(),
+                megrendelő.getNév(),
+                megrendelő.getVáros(),
+                megrendelő.getEmail(),
+                megrendelő.getMunka(),
+                megrendelő.getMunkatipus(),
+                megrendelő.getTelefonszám());
+            AdatbázisParancsok.updateChangesInTable(add);
+            AdatbázisParancsok.close();
             return add;
         }
         /// <summary>
@@ -165,18 +178,10 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         /// <returns></returns>
         public int visszaadKövetkezőMegrendelőAzonosítót()
         {
-           
-                int maximumAzonosító = 0;
-                foreach (Megrendelő m in megrendelők)
-                {
-                int megrendelőkMaximumMegrendelőAzonosító = getMaximumAzonosító();
-                    if (megrendelőkMaximumMegrendelőAzonosító > maximumAzonosító)
-                        maximumAzonosító = megrendelőkMaximumMegrendelőAzonosító;
-                }
-                if (maximumAzonosító > 0)
-                    return maximumAzonosító + 1;
-                else
-                    return 1;
+
+
+            return MegrendelokDT.Rows.Count + 1;
+  
          }
         
     }

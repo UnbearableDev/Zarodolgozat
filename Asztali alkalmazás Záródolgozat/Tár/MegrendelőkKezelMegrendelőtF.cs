@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Asztali_alkalmazás_Záródolgozat.Tár
 {
    interface IMegrendelőkKezelMegrendelőtF
     {
-        void hozzáadMegrendelőt(Megrendelő megrendelő);
+        DataTable hozzáadMegrendelőt(Megrendelő megrendelő);
         void törölMegrendelőt(int azonosító);
         void módosítMegrendelőt(int azonosító, Megrendelő Újmegrendelő);
         int számolMegrendelőt();
