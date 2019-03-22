@@ -14,7 +14,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         /// </summary>
         public Megrendelők()
         {
-            this.megrendelők = new List<Megrendelő>();
+         megrendelők = new List<Megrendelő>();
         }
         /// <summary>
         /// Get metódus a listához

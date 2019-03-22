@@ -76,9 +76,11 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         /// Megrendelő hozzáadása listához
         /// </summary>
         /// <param name="megrendelő">A hozzáadásra kerülő megrendelő</param>
-        public void hozzáadMegrendelőt(Megrendelő megrendelő)
+        public DataTable hozzáadMegrendelőt(Megrendelő megrendelő)
         {
             megrendelők.Add(megrendelő);
+           DataTable add = feltöltListábólAdattáblába();
+            return add;
         }
         /// <summary>
         /// Megrendelő törlése listából az index segitségével

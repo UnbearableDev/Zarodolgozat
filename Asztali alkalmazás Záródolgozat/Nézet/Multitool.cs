@@ -35,13 +35,13 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
         private void buttonHozzaadas_Click(object sender, EventArgs e)
         {
 
-            vezérlő.hozzáadniMegrendelőtMegrendelőkhöz(textBoxMultiEmail.Text,
+          MegrendelőDT =  vezérlő.hozzáadniMegrendelőtMegrendelőkhöz(textBoxMultiEmail.Text,
                 textBoxMultiMegrendeles.Text,
                 textBoxMultiMegrendelestipusa.Text,
                 textBoxMultiNev.Text,
                 Convert.ToInt32(textBoxTelefonszam.Text),
                 textBoxMultiVaros.Text);
-            //datagridviewFrissités();
+           
             
         }
 
@@ -59,7 +59,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
                     szerkform.getNévSzerkForm(),
                     szerkform.getTelefonszámSzerkForm(),
                     szerkform.getVárosSzerkForm());
-             //   datagridviewFrissités();
+           
             }
 
         }
@@ -67,21 +67,20 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
         private void buttonTorles_Click(object sender, EventArgs e)
         {
             vezérlő.törölniMegrendelőtMegrendelőkböl(visszaadVálasztottAzonosítót());
-           // datagridviewFrissités();
+          
         }
 
         private void buttonBetoltes_Click(object sender, EventArgs e)
         {
-            vezérlő.feltöltMegrendelőketAdatbázisból();
+            MegrendelőDT = vezérlő.adatokFrissitése();
             dataGridView1.DataSource = MegrendelőDT;
-           // datagridviewFrissités();
+
         }
 
         private void Multitool_Load(object sender, EventArgs e)
         {
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            MegrendelőDT = vezérlő.adatokFrissitése();
-            dataGridView1.DataSource = MegrendelőDT;
+            
         }
         private int visszaadVálasztottAzonosítót()
         {
@@ -91,14 +90,8 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
 
 
         }
-       // private void datagridviewFrissités()
-       // {
-         //   MegrendelőDT = vezérlő.adatokFrissitése();
-           // dataGridView1.DataSource = MegrendelőDT;
-           // AdatbázisParancsok.updateChangesInTable(MegrendelőDT);
-  
-            
- //       }
+      
+    
 
         private void buttonKilepes_Click(object sender, EventArgs e)
         {
