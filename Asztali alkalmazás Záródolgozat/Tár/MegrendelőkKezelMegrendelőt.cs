@@ -131,7 +131,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
                 Debug.WriteLine(e.Message);
                 throw new Exception("Adatbázis megnyitása nem lehetséges");
             }
-            string query = "SELECT * FROM adminisztracio";
+           string query = "UPDATE adminisztracio SET azonosito = '" + Újmegrendelő.getAzonosító() + "', nev = '" + Újmegrendelő.getNév() + "', varos = '" + Újmegrendelő.getVáros() + "', email = '" + Újmegrendelő.getEmail() + "', munka = '" + Újmegrendelő.getMunka() + "', munkatipus = '" + Újmegrendelő.getMunkatipus()+ "', telefonszam = '" + Újmegrendelő.getTelefonszám() + "' WHERE azonosito = " + Újmegrendelő.getAzonosító() + "";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
                 command.ExecuteNonQuery();
@@ -142,7 +142,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
             Kapcsolat k = new Kapcsolat();
             AdatbázisParancsok = k.kapcsolodas();
             AdatbázisParancsok.open();
-            DataTable AdatMódosít = AdatbázisParancsok.getToDataTable("SELECT * FROM adminisztacio");
+            DataTable AdatMódosít = AdatbázisParancsok.getToDataTable("SELECT * FROM adminisztracio");
             return AdatMódosít;
         }
         /// <summary>

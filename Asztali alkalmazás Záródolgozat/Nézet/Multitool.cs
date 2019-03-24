@@ -59,7 +59,8 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
                     szerkform.getNévSzerkForm(),
                     szerkform.getTelefonszámSzerkForm(),
                     szerkform.getVárosSzerkForm());
-           
+                MegrendelőDT = vezérlő.betölteniMegrendelőket();
+                dataGridView1.DataSource = MegrendelőDT;
             }
 
         }
