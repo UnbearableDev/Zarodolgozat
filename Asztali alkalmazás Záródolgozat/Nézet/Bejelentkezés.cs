@@ -32,6 +32,8 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
 
         private void buttonBejelentkezes_Click(object sender, EventArgs e)
         {
+            errorProviderFelh.Clear();
+            errorProviderJelsz.Clear();
             bool Authorization = false ;
             Kapcsolat k = new Kapcsolat();
             AdatbázisParancsok = k.kapcsolodas();
@@ -42,6 +44,14 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
                if(Adatok.Rows[i].Field<string>(0) == textBoxFelhasznalonev.Text && Adatok.Rows[0].Field<string>(1) == textBoxJelszo.Text)
                 {
                     Authorization = true;
+                }
+               if (Adatok.Rows[i].Field<string>(0) != textBoxFelhasznalonev.Text)
+                {
+                    errorProviderFelh.SetError(textBoxFelhasznalonev, "Nem megfelelő felhasználónév");
+                }
+                if (Adatok.Rows[0].Field<string>(1) != textBoxJelszo.Text)
+                {
+                    errorProviderJelsz.SetError(textBoxJelszo, "Nem megfelelő jelszó");
                 }
             }
             if (Authorization == true)

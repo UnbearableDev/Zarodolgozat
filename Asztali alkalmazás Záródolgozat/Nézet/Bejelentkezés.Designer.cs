@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonBejelentkezes = new System.Windows.Forms.Button();
             this.buttonMegse = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxJelszo = new System.Windows.Forms.TextBox();
             this.textBoxFelhasznalonev = new System.Windows.Forms.TextBox();
+            this.errorProviderJelsz = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderFelh = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderJelsz)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFelh)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonBejelentkezes
@@ -88,6 +93,14 @@
             this.textBoxFelhasznalonev.Size = new System.Drawing.Size(100, 20);
             this.textBoxFelhasznalonev.TabIndex = 5;
             // 
+            // errorProviderJelsz
+            // 
+            this.errorProviderJelsz.ContainerControl = this;
+            // 
+            // errorProviderFelh
+            // 
+            this.errorProviderFelh.ContainerControl = this;
+            // 
             // Bejelentkezés
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,6 +117,8 @@
             this.Name = "Bejelentkezés";
             this.Text = "Bejelentkezés";
             this.Load += new System.EventHandler(this.Bejelentkezés_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderJelsz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFelh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,6 +132,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxJelszo;
         private System.Windows.Forms.TextBox textBoxFelhasznalonev;
+        private System.Windows.Forms.ErrorProvider errorProviderJelsz;
+        private System.Windows.Forms.ErrorProvider errorProviderFelh;
     }
 }
 
