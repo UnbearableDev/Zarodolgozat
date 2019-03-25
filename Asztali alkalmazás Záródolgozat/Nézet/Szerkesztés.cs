@@ -12,14 +12,16 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
 {
     public partial class Szerkesztés : Form
     {
+        
         public Szerkesztés()
         {
             InitializeComponent();
+            
         }
 
         private void Szerkesztés_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void buttonOK_Click(object sender, EventArgs e)

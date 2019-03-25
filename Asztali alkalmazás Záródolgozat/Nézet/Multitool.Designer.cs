@@ -64,6 +64,7 @@
             this.dataGridViewMultiTool.ReadOnly = true;
             this.dataGridViewMultiTool.Size = new System.Drawing.Size(743, 374);
             this.dataGridViewMultiTool.TabIndex = 1;
+            this.dataGridViewMultiTool.SelectionChanged += new System.EventHandler(this.dataGridViewMultiTool_SelectionChanged);
             // 
             // buttonBetoltes
             // 
@@ -238,7 +239,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(986, 408);
+            this.ClientSize = new System.Drawing.Size(1006, 408);
             this.Controls.Add(this.labelMaximumMegrendelő);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
