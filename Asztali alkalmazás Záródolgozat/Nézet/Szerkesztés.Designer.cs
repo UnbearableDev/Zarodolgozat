@@ -79,6 +79,7 @@
             this.textBoxSzerkNev.Name = "textBoxSzerkNev";
             this.textBoxSzerkNev.Size = new System.Drawing.Size(100, 20);
             this.textBoxSzerkNev.TabIndex = 4;
+            this.textBoxSzerkNev.TextChanged += new System.EventHandler(this.textBoxSzerkNev_TextChanged);
             // 
             // textBoxSzerkEmail
             // 

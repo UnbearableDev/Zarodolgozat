@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using Asztali_alkalmazás_Záródolgozat.Vezérlő;
-using Asztali_alkalmazás_Záródolgozat.Tár;
 using Asztali_alkalmazás_Záródolgozat.Adatbázis;
 
 namespace Asztali_alkalmazás_Záródolgozat.Nézet
@@ -41,7 +40,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
                 textBoxMultiNev.Text,
                 Convert.ToInt32(textBoxTelefonszam.Text),
                 textBoxMultiVaros.Text);
-            dataGridView1.DataSource = MegrendelőDT;
+            dataGridViewMultiTool.DataSource = MegrendelőDT;
             
         }
 
@@ -51,6 +50,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
            
             if (szerkform.ShowDialog() == DialogResult.OK)
             {
+               
                 vezérlő.módosítaniMegrendelőtMegrendelőkhöz(
                     visszaadVálasztottAzonosítót(),
                     szerkform.getEmailSzerkForm(),
@@ -59,35 +59,33 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
                     szerkform.getNévSzerkForm(),
                     szerkform.getTelefonszámSzerkForm(),
                     szerkform.getVárosSzerkForm());
-                MegrendelőDT = vezérlő.betölteniMegrendelőket();
-                dataGridView1.DataSource = MegrendelőDT;
+
+                frissités();
             }
 
         }
 
         private void buttonTorles_Click(object sender, EventArgs e)
         {
-            int sor = dataGridView1.SelectedRows[0].Index;
+            int sor = dataGridViewMultiTool.SelectedRows[0].Index;
             vezérlő.törölniMegrendelőtMegrendelőkböl(sor,visszaadVálasztottAzonosítót());
-          
+            frissités();
         }
 
         private void buttonBetoltes_Click(object sender, EventArgs e)
         {
-            MegrendelőDT = vezérlő.betölteniMegrendelőket();
-            dataGridView1.DataSource = MegrendelőDT;
-          
+            frissités();
 
         }
 
         private void Multitool_Load(object sender, EventArgs e)
         {
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewMultiTool.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             
         }
         private int visszaadVálasztottAzonosítót()
         {
-            DataGridViewRow row = this.dataGridView1.SelectedRows[0];
+            DataGridViewRow row = this.dataGridViewMultiTool.SelectedRows[0];
             int Érték = Convert.ToInt32(row.Cells["azonosito"].Value.ToString());
             return Érték;
            
@@ -100,6 +98,11 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
         private void buttonKilepes_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void frissités()
+        {
+            MegrendelőDT = vezérlő.betölteniMegrendelőket();
+            dataGridViewMultiTool.DataSource = MegrendelőDT;
         }
     }
 }

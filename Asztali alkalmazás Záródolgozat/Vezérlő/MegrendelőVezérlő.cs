@@ -40,7 +40,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
         public DataTable betölteniMegrendelőket( )
         {
             DataTable DT = m.feltöltListábólAdattáblába();
-           // feltöltMegrendelőketAdatbázisból();
+         
             return DT;
         }
      

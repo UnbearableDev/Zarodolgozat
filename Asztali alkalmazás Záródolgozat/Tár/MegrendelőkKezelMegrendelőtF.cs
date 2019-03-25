@@ -10,7 +10,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
    interface IMegrendelőkKezelMegrendelőtF
     {
         DataTable hozzáadMegrendelőt(Megrendelő megrendelő);
-        void törölMegrendelőt(int azonosító);
+        DataTable törölMegrendelőt(int sor, int azonosító);
         DataTable módosítMegrendelőt(int azonosító, Megrendelő Újmegrendelő);
         int számolMegrendelőt();
         Megrendelő keresMegrendelőtNévről(string név);

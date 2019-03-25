@@ -39,5 +39,9 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
         public string getEmailSzerkForm()
         { return textBoxSzerkEmail.Text; }
 
+        private void textBoxSzerkNev_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

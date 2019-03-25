@@ -101,19 +101,29 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         /// <param name="azonosító">Az azonosító amit a törlendő megrendelő azonosítására használunk</param>
         public DataTable törölMegrendelőt(int sor ,int azonosító)
         {
+            Kapcsolat k = new Kapcsolat();
+            AdatbázisParancsok = k.kapcsolodas();
+            AdatbázisParancsok.open();
+            DataTable AdatTöröl = AdatbázisParancsok.getToDataTable("SELECT * FROM adminisztracio");
+            AdatTöröl.Rows.RemoveAt(sor);
             string connectionString = Kapcs.connectionString();
 
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            try
+           
+            string query= "DELETE FROM adminisztracio WHERE azonosito = " + azonosító + "";
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine(e.Message);
-                throw new Exception("Adatbázis megnyitása nem lehetséges");
-            }
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
 
+                }
+                connection.Close();
+            }
+            
+            AdatbázisParancsok.updateChangesInTable(AdatTöröl);
+            
+            return AdatTöröl;
         }
         /// <summary>
         /// Megrendelő módosítása a listában azonosító segitségével
@@ -134,10 +144,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
                 Debug.WriteLine(e.Message);
                 throw new Exception("Adatbázis megnyitása nem lehetséges");
             }
-            connection.Close();
 
-          
-           
             string query = "UPDATE adminisztracio SET azonosito = '" + Újmegrendelő.getAzonosító() + "', nev = '" + Újmegrendelő.getNév() + "', varos = '" + Újmegrendelő.getVáros() + "', email = '" + Újmegrendelő.getEmail() + "', munka = '" + Újmegrendelő.getMunka() + "', munkatipus = '" + Újmegrendelő.getMunkatipus()+ "', telefonszam = '" + Újmegrendelő.getTelefonszám() + "' WHERE azonosito = " + Újmegrendelő.getAzonosító() + "";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
