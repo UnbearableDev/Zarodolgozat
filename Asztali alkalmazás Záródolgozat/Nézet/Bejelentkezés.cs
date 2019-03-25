@@ -21,7 +21,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
 
         private void Bejelentkezés_Load(object sender, EventArgs e)
         {
-           
+            
 
         }
 

@@ -13,7 +13,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
 {
     class MegrendelőVezérlő 
     {
-        DataTable adatok = new DataTable();
+        
         Megrendelők m = new Megrendelők();
         MySQLDatabaseInterface AdatbázisParancsok = new MySQLDatabaseInterface();
         
@@ -47,6 +47,12 @@ namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
         public void feltöltMegrendelőketAdatbázisból()
         {
             m.feltöltMegrendelőkAdatbázisból();
+        }
+        public int visszaAdMaximumMegrendelőt()
+        {
+            DataTable adatok = m.feltöltListábólAdattáblába();
+            return adatok.Rows.Count;
+         
         }
      
     }

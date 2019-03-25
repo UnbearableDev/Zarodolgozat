@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridViewMultiTool = new System.Windows.Forms.DataGridView();
             this.buttonBetoltes = new System.Windows.Forms.Button();
             this.buttonHozzaadas = new System.Windows.Forms.Button();
@@ -46,7 +47,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxTelefonszam = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelMaximumMegrendelő = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMultiTool)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewMultiTool
@@ -207,12 +212,35 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "Telefonszám";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(775, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 13);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Összes munka száma:";
+            // 
+            // labelMaximumMegrendelő
+            // 
+            this.labelMaximumMegrendelő.AutoSize = true;
+            this.labelMaximumMegrendelő.Location = new System.Drawing.Point(775, 51);
+            this.labelMaximumMegrendelő.Name = "labelMaximumMegrendelő";
+            this.labelMaximumMegrendelő.Size = new System.Drawing.Size(0, 13);
+            this.labelMaximumMegrendelő.TabIndex = 23;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Multitool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(986, 408);
+            this.Controls.Add(this.labelMaximumMegrendelő);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxTelefonszam);
             this.Controls.Add(this.label6);
@@ -236,6 +264,7 @@
             this.Text = "Multitool";
             this.Load += new System.EventHandler(this.Multitool_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMultiTool)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,5 +289,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxTelefonszam;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelMaximumMegrendelő;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -41,7 +41,8 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
                 Convert.ToInt32(textBoxTelefonszam.Text),
                 textBoxMultiVaros.Text);
             dataGridViewMultiTool.DataSource = MegrendelőDT;
-            
+            labelMaximumMegrendelő.Text = vezérlő.visszaAdMaximumMegrendelőt().ToString();
+
         }
 
         private void buttonSzerkesztes_Click(object sender, EventArgs e)
@@ -61,6 +62,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
                     szerkform.getVárosSzerkForm());
 
                 frissités();
+              
             }
 
         }
@@ -70,6 +72,7 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
             int sor = dataGridViewMultiTool.SelectedRows[0].Index;
             vezérlő.törölniMegrendelőtMegrendelőkböl(sor,visszaadVálasztottAzonosítót());
             frissités();
+         
         }
 
         private void buttonBetoltes_Click(object sender, EventArgs e)
@@ -100,9 +103,10 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
             Application.Exit();
         }
         private void frissités()
-        {
+        {  
             MegrendelőDT = vezérlő.betölteniMegrendelőket();
             dataGridViewMultiTool.DataSource = MegrendelőDT;
+            labelMaximumMegrendelő.Text = vezérlő.visszaAdMaximumMegrendelőt().ToString();
         }
     }
 }
