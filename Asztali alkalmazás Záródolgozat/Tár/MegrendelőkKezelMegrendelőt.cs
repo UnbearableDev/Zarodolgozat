@@ -99,16 +99,19 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
         /// Megrendelő törlése listából az index segitségével
         /// </summary>
         /// <param name="azonosító">Az azonosító amit a törlendő megrendelő azonosítására használunk</param>
-        public void törölMegrendelőt(int azonosító)
+        public DataTable törölMegrendelőt(int sor ,int azonosító)
         {
-            int index = 0;
-            foreach (Megrendelő m in megrendelők)
+            string connectionString = Kapcs.connectionString();
+
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
             {
-                if (m.getAzonosító() == azonosító)
-                {
-                    megrendelők.RemoveAt(index);
-                }
-                index++;
+                connection.Open();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                throw new Exception("Adatbázis megnyitása nem lehetséges");
             }
 
         }
@@ -131,7 +134,11 @@ namespace Asztali_alkalmazás_Záródolgozat.Tár
                 Debug.WriteLine(e.Message);
                 throw new Exception("Adatbázis megnyitása nem lehetséges");
             }
-           string query = "UPDATE adminisztracio SET azonosito = '" + Újmegrendelő.getAzonosító() + "', nev = '" + Újmegrendelő.getNév() + "', varos = '" + Újmegrendelő.getVáros() + "', email = '" + Újmegrendelő.getEmail() + "', munka = '" + Újmegrendelő.getMunka() + "', munkatipus = '" + Újmegrendelő.getMunkatipus()+ "', telefonszam = '" + Újmegrendelő.getTelefonszám() + "' WHERE azonosito = " + Újmegrendelő.getAzonosító() + "";
+            connection.Close();
+
+          
+           
+            string query = "UPDATE adminisztracio SET azonosito = '" + Újmegrendelő.getAzonosító() + "', nev = '" + Újmegrendelő.getNév() + "', varos = '" + Újmegrendelő.getVáros() + "', email = '" + Újmegrendelő.getEmail() + "', munka = '" + Újmegrendelő.getMunka() + "', munkatipus = '" + Újmegrendelő.getMunkatipus()+ "', telefonszam = '" + Újmegrendelő.getTelefonszám() + "' WHERE azonosito = " + Újmegrendelő.getAzonosító() + "";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
                 command.ExecuteNonQuery();

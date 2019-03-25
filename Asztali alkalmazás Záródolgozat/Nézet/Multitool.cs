@@ -67,7 +67,8 @@ namespace Asztali_alkalmazás_Záródolgozat.Nézet
 
         private void buttonTorles_Click(object sender, EventArgs e)
         {
-            vezérlő.törölniMegrendelőtMegrendelőkböl(visszaadVálasztottAzonosítót());
+            int sor = dataGridView1.SelectedRows[0].Index;
+            vezérlő.törölniMegrendelőtMegrendelőkböl(sor,visszaadVálasztottAzonosítót());
           
         }
 

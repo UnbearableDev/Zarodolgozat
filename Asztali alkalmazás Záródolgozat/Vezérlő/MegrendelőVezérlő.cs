@@ -24,10 +24,10 @@ namespace Asztali_alkalmazás_Záródolgozat.Vezérlő
           DataTable d =  m.hozzáadMegrendelőt(újMegrendelő);
           return d;
         }
-        public void törölniMegrendelőtMegrendelőkböl(int azonosító)
+        public DataTable törölniMegrendelőtMegrendelőkböl(int sor,int azonosító)
         {
 
-                m.törölMegrendelőt(azonosító);
+             return   m.törölMegrendelőt(sor, azonosító);
          
         }
         public DataTable módosítaniMegrendelőtMegrendelőkhöz(int állandóAzonosító,string email, string munka, string munkatípus, string név, int telefonszám, string város)
